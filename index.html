@@ -1,15 +1,1351 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Edify Academy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body style="font-family: Arial; max-width: 900px; margin: auto; padding: 40px;">
-  <h1>Edify Academy</h1>
-  <p>Professional tuition and academic support.</p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edify Academy | GCSE & A-Level Tutors in Slough & Berkshire</title>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:info@edifyacademy.co.uk">info@edifyacademy.co.uk</a></p>
+  <meta name="description" content="Edify Academy provides GCSE and A-Level tutoring with experienced tutors. 1-to-1, small classes, and Study Buddy sessions. Book a free session today." />
+  <meta name="keywords" content="tuition, tutor, tutoring, GCSE tutor, A-Level tutor, Slough tutor, tuition centre, maths tutor, english tutor, physics tutor, biology tutor, chemistry tutor, private tuition, small group tuition, study buddy tuition" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <meta property="og:title" content="Edify Academy | GCSE & A-Level Tutors" />
+  <meta property="og:description" content="GCSE & A-Level tutoring with experienced tutors. 1-to-1, classes, and Study Buddy. Book a free session." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/SJ778778/edifyacademy.co.uk/main/assets/ChatGPT%20Image%20Jan%201%2C%202026%2C%2006_42_09%20PM.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"EducationalOrganization",
+    "name":"Edify Academy",
+    "url":"https://edifyacademy.co.uk",
+    "email":"admissions@edifyacademy.co.uk",
+    "description":"GCSE and A-Level tutoring with experienced tutors. 1-to-1, small classes, and Study Buddy.",
+    "areaServed":[
+      {"@type":"City","name":"Slough"},
+      {"@type":"AdministrativeArea","name":"Berkshire"},
+      {"@type":"City","name":"Langley"},
+      {"@type":"City","name":"Windsor"},
+      {"@type":"City","name":"Maidenhead"}
+    ],
+    "sameAs":[
+      "https://github.com/SJ778778/edifyacademy.co.uk"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#5c6475;
+
+      /* Theme (blue) */
+      --brand:#1e4fbf;     /* primary blue */
+      --brand-2:#3b82f6;   /* accent blue (replaces yellow) */
+      --brand-3:#0f2f7a;   /* darker blue */
+      --border:#e8ebf2;
+      --card:#ffffff;
+      --shadow: 0 10px 30px rgba(14, 22, 44, .08);
+      --radius: 18px;
+
+      --ok:#128a3b;
+      --danger:#c01f2e;
+      --danger-bg:#fff1f2;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    img{max-width:100%; height:auto; display:block}
+
+    .container{width:min(1120px, 92vw); margin-inline:auto}
+    .grid{display:grid; gap:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:.55rem;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--card);
+      text-decoration:none;
+      font-weight:700;
+      transition:.2s;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.06)}
+    .btn.primary{background:var(--brand); border-color:var(--brand); color:white}
+    .btn.accent{background:var(--brand-2); border-color:var(--brand-2); color:white}
+
+    .chip{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:13px; font-weight:700;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--brand-3);
+      background:#f6f8ff;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .muted{color:var(--muted)}
+    .h1{font-size:clamp(38px, 4vw, 54px); line-height:1.10; margin:0} /* bigger */
+    .h2{font-size:clamp(22px, 2.2vw, 30px); margin:0 0 8px}
+    .h3{font-size:18px; margin:0 0 6px}
+    .lead{font-size:20px; color:var(--muted); margin:10px 0 0} /* bigger */
+    .section{padding:54px 0}
+    .kicker{color:var(--brand); font-weight:800; letter-spacing:.02em; text-transform:uppercase; font-size:12px}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+      min-width: 240px;
+    }
+    .brand img{
+      width: 114px;   /* larger logo */
+      height: 114px;  /* larger logo */
+      object-fit: contain;
+      background: transparent;
+    }
+    .brand strong{font-size:18px}
+    nav{display:flex; align-items:center; gap:10px}
+
+    /* KEEP NAV TABS IN ONE LINE */
+    .navlinks{
+      display:flex;
+      gap:6px;
+      align-items:center;
+      flex-wrap:nowrap;       /* no wrapping */
+      white-space:nowrap;
+    }
+    .navlinks a{
+      padding:10px 10px;      /* slightly tighter */
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:750;
+      color:var(--brand-3);
+      border:1px solid transparent;
+      font-size:14px;         /* slightly smaller only to fit one line */
+    }
+    .navlinks a:hover{background:#f5f7ff; border-color:#e7ebff}
+    .navlinks a.active{background:#eef2ff; border-color:#dde6ff}
+    .navlinks a.trial{
+      background:var(--brand-2);
+      border-color:var(--brand-2);
+      color:white;
+    }
+
+    .burger{
+      display:none;
+      border:1px solid var(--border);
+      background:white;
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      font-weight:800;
+    }
+    .burger .lines{display:grid; gap:4px}
+    .burger span{
+      width:18px; height:2px; background:var(--brand-3); display:block; border-radius:2px;
+    }
+    .mobileMenu{
+      display:none;
+      padding:0 0 14px;
+    }
+    .mobileMenu .menuCard{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:10px;
+      display:grid;
+      gap:6px;
+      background:white;
+    }
+    .mobileMenu a{
+      padding:12px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      color:var(--brand-3);
+    }
+    .mobileMenu a:hover{background:#f6f8ff}
+    .mobileMenu a.trial{background:var(--brand-2); color:white}
+
+    @media (max-width: 920px){
+      .navlinks{display:none}
+      .burger{display:inline-flex}
+      .mobileMenu.show{display:block}
+    }
+
+    .heroWrap{
+      padding:34px 0 18px;
+      background:
+        radial-gradient(900px 260px at 10% 10%, rgba(30,79,191,.10), transparent 60%),
+        radial-gradient(700px 240px at 90% 30%, rgba(59,130,246,.16), transparent 62%);
+      border-bottom:1px solid var(--border);
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .heroImg{
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      min-height: 290px;
+      background:#f7f9ff;
+    }
+    .heroImg img{width:100%; height:100%; object-fit:cover}
+
+    .offerGrid{grid-template-columns: repeat(3, 1fr)}
+    @media (max-width: 900px){ .offerGrid{grid-template-columns:1fr} }
+    .iconDot{
+      width:34px; height:34px;
+      border-radius:12px;
+      background: rgba(30,79,191,.12);
+      display:inline-flex; align-items:center; justify-content:center;
+      font-weight:900; color:var(--brand);
+    }
+
+    .req{color:var(--danger); margin-left:4px}
+    .formRow{display:grid; gap:8px}
+    label{font-weight:800}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:white;
+      font: inherit;
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{border-color: rgba(30,79,191,.55); box-shadow: 0 0 0 4px rgba(30,79,191,.12)}
+    .errorBox{
+      display:none;
+      border:1px solid rgba(192,31,46,.35);
+      background:var(--danger-bg);
+      color:#7a1020;
+      border-radius:14px;
+      padding:12px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+    .fieldError{
+      display:none;
+      color:var(--danger);
+      font-weight:800;
+      margin-top:-2px;
+      font-size:13px;
+    }
+    .hasError input, .hasError select, .hasError textarea{
+      border-color: rgba(192,31,46,.45);
+      box-shadow: 0 0 0 4px rgba(192,31,46,.10);
+    }
+
+    .contactSplit{grid-template-columns: 1.2fr .8fr; align-items:start}
+    @media (max-width: 900px){ .contactSplit{grid-template-columns:1fr} }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footRow{
+      display:flex; gap:14px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+    }
+    .footLinks{display:flex; gap:12px; flex-wrap:wrap}
+    .footLinks a{color:var(--muted); text-decoration:none}
+    .footLinks a:hover{color:var(--brand)}
+    .tiny{font-size:12px}
+
+    .page{display:none}
+    .page.active{display:block}
+    .homeOnly{display:block}
+    .page:not(#home).active .homeOnly{display:none}
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:white;
+      font-weight:800;
+    }
+
+    /* ===== Courses replacement styles (from your newer courses code) ===== */
+    .tabs{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin: 10px 0 16px;
+    }
+    .tabBtn{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:10px 12px;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      color:var(--brand-3);
+      font-size:15px;
+    }
+    .tabBtn.active{
+      background: rgba(30,79,191,.10);
+      border-color: rgba(30,79,191,.25);
+      color: var(--brand);
+    }
+    .courseGrid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 980px){
+      .courseGrid{ grid-template-columns: 1fr; }
+    }
+    .courseCard{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .courseHead{
+      padding:16px 16px 12px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .courseHead .left strong{
+      display:block;
+      color:var(--brand-3);
+      font-size:18px;
+      margin-bottom:4px;
+    }
+    .courseHead .left span{
+      color:var(--muted);
+      font-size:15px;
+    }
+    .pill{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(30,79,191,.20);
+      background: rgba(30,79,191,.10);
+      font-weight:900;
+      font-size:12px;
+      color: var(--brand-3);
+      white-space:nowrap;
+      height:fit-content;
+    }
+    .courseBody{ padding:12px 16px 16px; }
+    details{
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#f7f9ff;
+      padding:10px 12px;
+      margin-top:10px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      color:var(--brand-3);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .topicList{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .topicList li{ margin:6px 0; }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="#home" aria-label="Edify Academy Home">
+        <img
+          src="https://raw.githubusercontent.com/SJ778778/edifyacademy.co.uk/main/assets/ChatGPT%20Image%20Jan%201%2C%202026%2C%2006_42_09%20PM.png"
+          alt="Edify Academy logo"
+          loading="eager"
+        />
+        <div>
+          <strong>Edify Academy</strong><br/>
+          <span class="muted tiny">Tuition that builds confidence</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <div class="navlinks" id="navlinks">
+          <a href="#home" data-route="home">Home</a>
+          <a href="#courses" data-route="courses">Courses</a>
+          <a href="#admissions" data-route="admissions">Admissions</a>
+          <a href="#vacancies" data-route="vacancies">Vacancies</a>
+          <a href="#safeguarding" data-route="safeguarding">Safeguarding</a>
+          <a href="#contact" data-route="contact">Contact</a>
+          <a class="trial" href="#free-trial" data-route="free-trial">Free Trial</a>
+        </div>
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span class="lines" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          Menu
+        </button>
+      </nav>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="menuCard" role="menu">
+        <a href="#home" data-route="home">Home</a>
+        <a href="#courses" data-route="courses">Courses</a>
+        <a href="#admissions" data-route="admissions">Admissions</a>
+        <a href="#vacancies" data-route="vacancies">Vacancies</a>
+        <a href="#safeguarding" data-route="safeguarding">Safeguarding</a>
+        <a href="#contact" data-route="contact">Contact</a>
+        <a class="trial" href="#free-trial" data-route="free-trial">Free Trial</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="heroWrap">
+      <div class="container hero">
+        <div class="card">
+          <div class="kicker">Tuition that builds confidence</div>
+          <h1 class="h1">Clear, structured GCSE & A-Level tuition — built around your child.</h1>
+          <p class="lead">
+            We teach in a calm, supportive way, but we keep standards high. Every lesson has a clear plan,
+            targeted exam preparation, and feedback students can actually use.
+          </p>
+          <p class="muted">
+  We support students across Slough and nearby areas including Langley, Windsor, and Maidenhead.
+</p>
+
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="btn accent" href="#free-trial">Book free session</a>
+            <a class="btn primary" href="#courses">Explore courses</a>
+            <a class="btn" href="#contact">Send an enquiry</a>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <span class="badge">✅ GCSE</span>
+            <span class="badge">✅ A-Level</span>
+            <span class="badge">✅ 1-to-1 • Small classes • Study Buddy</span>
+          </div>
+
+          <p class="muted" style="margin-top:14px">
+            Parents tell us they like how organised the teaching is — students know exactly what to revise,
+            what they’re improving, and what to focus on next.
+          </p>
+        </div>
+
+        <div class="heroImg" aria-label="Students studying">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=70"
+            alt="Students learning with a tutor"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple home formats (kept) -->
+    <div class="section homeOnly" style="padding-top:24px;">
+      <div class="container">
+        <div class="grid offerGrid">
+          <div class="card">
+            <div class="iconDot">1</div>
+            <h3 class="h3" style="margin-top:10px">1-to-1 Tuition</h3>
+            <p class="muted">Personalised lessons that target gaps quickly and build confidence.</p>
+          </div>
+          <div class="card">
+            <div class="iconDot">2</div>
+            <h3 class="h3" style="margin-top:10px">Small Classes</h3>
+            <p class="muted">Structured teaching + guided practice in a focused group.</p>
+          </div>
+          <div class="card">
+            <div class="iconDot">3</div>
+            <h3 class="h3" style="margin-top:10px">Study Buddy</h3>
+            <p class="muted">Two students at a similar level. Personalised lessons at a reduced rate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES (REPLACED) -->
+  <section id="courses" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Courses</div>
+          <h2 class="h2">Targeted exam preparation.</h2>
+          <p class="muted">
+            Choose GCSE or A-Level below. Each course follows a structured pathway with topic teaching,
+            exam practice, and clear feedback for next steps.
+          </p>
+
+          <div class="tabs" role="tablist" aria-label="Course level tabs">
+            <button class="tabBtn active" data-level="gcse" role="tab" aria-selected="true">GCSE</button>
+            <button class="tabBtn" data-level="alevel" role="tab" aria-selected="false">A-Level</button>
+          </div>
+
+          <!-- GCSE GRID -->
+          <div class="courseGrid" id="gcseGrid">
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE Mathematics</strong>
+                  <span>Foundation & Higher • Edexcel / AQA / OCR style support</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Number</summary>
+                  <ul class="topicList">
+                    <li>Integers, decimals, fractions, percentages</li>
+                    <li>Ratio & proportion, direct & inverse proportion</li>
+                    <li>Standard form, bounds, rounding, estimation</li>
+                    <li>Indices, surds (Higher), prime factors, HCF/LCM</li>
+                    <li>Growth & decay, compound interest, repeated change</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Algebra</summary>
+                  <ul class="topicList">
+                    <li>Expressions, factorising, expanding (incl. quadratics)</li>
+                    <li>Solving linear & quadratic equations (Higher)</li>
+                    <li>Simultaneous equations, inequalities</li>
+                    <li>Sequences, nth term, quadratic sequences (Higher)</li>
+                    <li>Graphs: linear, quadratic, cubic, reciprocal, exponential (Higher)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Geometry & Measures</summary>
+                  <ul class="topicList">
+                    <li>Angles, bearings, constructions, loci</li>
+                    <li>Perimeter, area, volume, surface area</li>
+                    <li>Circle theorems (Higher), circles: arcs & sectors</li>
+                    <li>Pythagoras, trigonometry, sine/cosine rule (Higher)</li>
+                    <li>Transformations, similarity & congruence</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Statistics & Probability</summary>
+                  <ul class="topicList">
+                    <li>Averages, spread, cumulative frequency, box plots</li>
+                    <li>Scatter graphs, correlation, line of best fit</li>
+                    <li>Tree diagrams, conditional probability (Higher)</li>
+                    <li>Histograms & frequency density (Higher)</li>
+                    <li>Interpreting real exam-style data questions</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE English Language</strong>
+                  <span>Reading & Writing • Analysis • Transactional writing</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Reading skills</summary>
+                  <ul class="topicList">
+                    <li>Inference and evidence selection</li>
+                    <li>Language analysis: methods + effect</li>
+                    <li>Structure analysis: tension, perspective, shifts</li>
+                    <li>Comparison across texts (purpose, viewpoint, tone)</li>
+                    <li>Exam timing and question planning</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Writing skills</summary>
+                  <ul class="topicList">
+                    <li>Narrative writing: craft, voice, structure</li>
+                    <li>Descriptive writing: sensory detail, imagery</li>
+                    <li>Transactional writing: speeches, articles, letters</li>
+                    <li>Paragraphing, cohesion, sentence variety</li>
+                    <li>SPaG: punctuation accuracy, ambitious vocabulary</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Grade 7–9 mastery</summary>
+                  <ul class="topicList">
+                    <li>Embedding quotes and zooming in</li>
+                    <li>Alternative interpretations</li>
+                    <li>Precision with terminology and effect</li>
+                    <li>High-impact openings & endings</li>
+                    <li>Self-editing routines for top marks</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE English Literature</strong>
+                  <span>Texts, themes, quotation mastery, essay structure</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Core essay skills</summary>
+                  <ul class="topicList">
+                    <li>Thesis-led introductions + argument shaping</li>
+                    <li>PEEZ/PEA with deeper analysis</li>
+                    <li>Context integration (relevant, not dumped)</li>
+                    <li>Comparative paragraphs (when required)</li>
+                    <li>Timing + planning for exam pressure</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Poetry</summary>
+                  <ul class="topicList">
+                    <li>Poetic methods (form, structure, language)</li>
+                    <li>Comparing poems: themes, voice, tone</li>
+                    <li>Quotation selection + “zoom” technique</li>
+                    <li>Unseen poetry strategies</li>
+                    <li>Writing high-mark comparisons</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Set texts</summary>
+                  <ul class="topicList">
+                    <li>Character development & relationships</li>
+                    <li>Themes (power, conflict, identity, morality)</li>
+                    <li>Key scenes & turning points</li>
+                    <li>Quote banks by theme/character</li>
+                    <li>Exam-style responses with model paragraphs</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE Biology</strong>
+                  <span>Core biology + required practicals + exam technique</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Cells & organisation</summary>
+                  <ul class="topicList">
+                    <li>Cell structure, specialised cells</li>
+                    <li>Transport: diffusion, osmosis, active transport</li>
+                    <li>Microscopes & calculating magnification</li>
+                    <li>Enzymes and factors affecting rate</li>
+                    <li>Organisation: tissues, organs, systems</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Human biology</summary>
+                  <ul class="topicList">
+                    <li>Digestive system & required practicals</li>
+                    <li>Circulatory system, heart, blood, vessels</li>
+                    <li>Respiration, gas exchange, exercise</li>
+                    <li>Nervous & hormonal control, homeostasis</li>
+                    <li>Inheritance and variation</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Ecology</summary>
+                  <ul class="topicList">
+                    <li>Food chains/webs, trophic levels</li>
+                    <li>Cycles: carbon, water, nitrogen</li>
+                    <li>Sampling: quadrats, transects</li>
+                    <li>Biodiversity and human impacts</li>
+                    <li>Required practical: field investigations</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE Chemistry</strong>
+                  <span>Foundation & Higher • Calculations + required practicals</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Atomic structure & bonding</summary>
+                  <ul class="topicList">
+                    <li>Atoms, isotopes, ions</li>
+                    <li>Electronic structure & periodic table patterns</li>
+                    <li>Ionic, covalent, metallic bonding</li>
+                    <li>Structure-property links (giant structures)</li>
+                    <li>Nanoparticles (where applicable)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Quantitative chemistry</summary>
+                  <ul class="topicList">
+                    <li>Moles, Mr, reacting masses</li>
+                    <li>Concentration calculations</li>
+                    <li>Gas volumes (exam level)</li>
+                    <li>Yield, atom economy</li>
+                    <li>Titrations (practical focus)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Rates, equilibria & energy</summary>
+                  <ul class="topicList">
+                    <li>Rates of reaction + required practical</li>
+                    <li>Collision theory, catalysts</li>
+                    <li>Endothermic/exothermic, energy profiles</li>
+                    <li>Reversible reactions and equilibrium (Higher)</li>
+                    <li>Industrial chemistry (spec dependent)</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>GCSE Physics</strong>
+                  <span>Forces • Energy • Electricity • Waves • Space (spec dependent)</span>
+                </div>
+                <span class="pill">GCSE</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Energy & forces</summary>
+                  <ul class="topicList">
+                    <li>Energy stores, transfers, efficiency</li>
+                    <li>Work done, power, energy calculations</li>
+                    <li>Forces, free-body diagrams, resultant force</li>
+                    <li>Motion graphs, acceleration, stopping distance</li>
+                    <li>Momentum, impact forces (Higher)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Electricity & magnetism</summary>
+                  <ul class="topicList">
+                    <li>Current, potential difference, resistance</li>
+                    <li>Series/parallel circuits and circuit rules</li>
+                    <li>I–V characteristics + required practical</li>
+                    <li>Power, energy in circuits</li>
+                    <li>Motors & generators (spec dependent)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Waves & space</summary>
+                  <ul class="topicList">
+                    <li>Wave properties, reflection/refraction</li>
+                    <li>Sound basics</li>
+                    <li>EM spectrum, uses & hazards</li>
+                    <li>Radioactivity (spec dependent)</li>
+                    <li>Space physics (spec dependent)</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+
+          <!-- A-LEVEL GRID -->
+          <div class="courseGrid" id="alevelGrid" style="display:none;">
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>A-Level Mathematics</strong>
+                  <span>Pure • Mechanics • Statistics (spec dependent)</span>
+                </div>
+                <span class="pill">A-LEVEL</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Pure Mathematics</summary>
+                  <ul class="topicList">
+                    <li>Algebra & functions (including inverses)</li>
+                    <li>Trigonometry (identities, equations)</li>
+                    <li>Exponentials & logarithms</li>
+                    <li>Calculus: differentiation & integration</li>
+                    <li>Numerical methods, proof (spec dependent)</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Mechanics</summary>
+                  <ul class="topicList">
+                    <li>Kinematics in 1D and 2D</li>
+                    <li>Forces, Newton’s laws, friction</li>
+                    <li>Moments, equilibrium</li>
+                    <li>Work, energy, power</li>
+                    <li>Momentum and collisions</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Statistics</summary>
+                  <ul class="topicList">
+                    <li>Data presentation & interpretation</li>
+                    <li>Sampling, hypothesis testing basics</li>
+                    <li>Probability & distributions</li>
+                    <li>Correlation & regression</li>
+                    <li>Large data set (spec dependent)</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>A-Level Biology</strong>
+                  <span>Core topics • Practical skills • Application questions</span>
+                </div>
+                <span class="pill">A-LEVEL</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Biological molecules & cells</summary>
+                  <ul class="topicList">
+                    <li>Proteins, enzymes, membranes</li>
+                    <li>Transport in cells, cell cycle</li>
+                    <li>DNA/RNA basics and replication</li>
+                    <li>Required practical skills & analysis</li>
+                    <li>Application questions & data</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Organisms & ecosystems</summary>
+                  <ul class="topicList">
+                    <li>Gas exchange, transport systems</li>
+                    <li>Genetics, inheritance, selection</li>
+                    <li>Populations and ecology</li>
+                    <li>Interpreting unfamiliar experiments</li>
+                    <li>Exam technique for longer questions</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>A-Level Chemistry</strong>
+                  <span>Physical • Inorganic • Organic • Practical mastery</span>
+                </div>
+                <span class="pill">A-LEVEL</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Physical chemistry</summary>
+                  <ul class="topicList">
+                    <li>Amount of substance & equilibria</li>
+                    <li>Thermodynamics & kinetics</li>
+                    <li>Electrode potentials & redox</li>
+                    <li>Acids/bases and buffers</li>
+                    <li>Graph/data interpretation</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Organic & analysis</summary>
+                  <ul class="topicList">
+                    <li>Mechanisms: substitution, addition, elimination</li>
+                    <li>Spectroscopy: IR, NMR (spec dependent)</li>
+                    <li>Polymers and synthesis routes</li>
+                    <li>Practical techniques and evaluation</li>
+                    <li>Multi-step organic questions</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="courseCard">
+              <div class="courseHead">
+                <div class="left">
+                  <strong>A-Level Physics</strong>
+                  <span>Mechanics • Fields • Circuits • Waves • Quantum (spec dependent)</span>
+                </div>
+                <span class="pill">A-LEVEL</span>
+              </div>
+              <div class="courseBody">
+                <details open>
+                  <summary>Mechanics & materials</summary>
+                  <ul class="topicList">
+                    <li>Kinematics, SUVAT, projectiles</li>
+                    <li>Forces, momentum, impulse</li>
+                    <li>Work/energy/power</li>
+                    <li>Materials: stress/strain, Young modulus</li>
+                    <li>Uncertainties & practical skills</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Electricity, fields & waves</summary>
+                  <ul class="topicList">
+                    <li>Circuits: resistivity, Kirchhoff’s laws</li>
+                    <li>Capacitance and exponential graphs</li>
+                    <li>Gravitational/electric fields, potentials</li>
+                    <li>Waves & superposition</li>
+                    <li>Quantum ideas (spec dependent)</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px">
+            <a class="btn accent" href="#free-trial">Book free session</a>
+            <a class="btn primary" href="#contact">Ask a question</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS -->
+  <section id="admissions" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Admissions</div>
+          <h2 class="h2">How to start</h2>
+          <p class="muted">
+            Send a quick message with the subject, year group, and availability. We’ll reply with the best option
+            (1-to-1, small class, or Study Buddy), and the next available times.
+          </p>
+          <p class="muted">
+            If you’re not sure which exam board your child is doing, that’s fine — we’ll guide you.
+          </p>
+          <p class="muted">
+            Email: <a href="mailto:admissions@edifyacademy.co.uk"><strong>admissions@edifyacademy.co.uk</strong></a>
+          </p>
+
+          <div class="card" style="box-shadow:none; margin-top:14px; border-style:dashed">
+            <div class="kicker" style="margin-bottom:6px">Why choose us</div>
+            <p class="muted" style="margin:0">
+              We’re experienced classroom teachers and tutors who know what exam boards reward — and how to teach it clearly.
+              Lessons are structured, students get regular exam practice, and parents get honest feedback about what’s improving and what to focus on next.
+            </p>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="btn accent" href="#free-trial">Book free session</a>
+            <a class="btn primary" href="#contact">Send an enquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VACANCIES -->
+  <section id="vacancies" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Vacancies</div>
+          <h2 class="h2">Join the team</h2>
+          <p class="muted">
+            We’re always interested in great tutors who care about outcomes and professionalism.
+            If you’re warm, organised, and you teach with clarity, we’d love to hear from you.
+          </p>
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr; margin-top:14px">
+            <div class="card" style="box-shadow:none">
+              <h3 class="h3">What it’s like working with us</h3>
+              <p class="muted">
+                We run Edify properly — clear expectations, strong communication, and a focus on doing the basics well.
+                You’ll teach motivated students, follow a structured approach, and you’ll be supported with resources and guidance.
+              </p>
+              <p class="muted">
+                We respect your time, keep things organised, and we care about quality. If you’re the type of tutor who wants to do a great job,
+                you’ll fit in well here.
+              </p>
+            </div>
+
+            <div class="card" style="box-shadow:none">
+              <h3 class="h3">Contact</h3>
+              <p class="muted">For vacancies and leadership enquiries:</p>
+              <p><a href="mailto:leadership@edifyacademy.co.uk"><strong>leadership@edifyacademy.co.uk</strong></a></p>
+
+              <div class="card" style="box-shadow:none; border-style:dashed; margin-top:10px">
+                <strong>Typical requirements</strong><br/>
+                <span class="muted">
+                  Strong subject knowledge • Clear communication • Professional boundaries • Reliability
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFEGUARDING -->
+  <section id="safeguarding" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Safeguarding</div>
+          <h2 class="h2">Our safeguarding commitment</h2>
+
+          <p class="muted">
+            Edify Academy is committed to safeguarding and promoting the welfare of children and young people.
+            Safeguarding is central to our work and underpins all aspects of our provision.
+          </p>
+
+          <div class="card" style="box-shadow:none; margin-top:12px; border-style:dashed">
+            <strong>Safeguarding contact:</strong>
+            <a href="mailto:safeguarding@edifyacademy.co.uk">safeguarding@edifyacademy.co.uk</a>
+          </div>
+
+          <p class="muted" style="margin-top:12px">
+            Download our safeguarding policy below.
+          </p>
+
+          <!-- IMPORTANT: Replace with your GitHub RAW PDF link -->
+          <a class="btn primary" href="assets/Edify-Academy-Safeguarding-Policy.pdf" download>
+            👉 Download our Safeguarding Policy (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TRIAL -->
+  <section id="free-trial" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Free Trial</div>
+          <h2 class="h2">Book your free session</h2>
+          <p class="muted">Tell us the subject and level, and we’ll confirm the best route.</p>
+          <a class="btn primary" href="#contact">Send an enquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Contact</div>
+          <h2 class="h2">Send an enquiry</h2>
+
+          <div class="grid contactSplit" style="margin-top:14px">
+            <div class="card" style="box-shadow:none">
+              <div class="errorBox" id="errorBox"></div>
+
+              <form id="enquiryForm" novalidate>
+                <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                  <div class="formRow" id="wrap-name">
+                    <label for="name">Full name<span class="req">*</span></label>
+                    <input id="name" name="name" required placeholder="Your name" />
+                    <div class="fieldError" id="err-name">Please enter your full name.</div>
+                  </div>
+
+                  <div class="formRow" id="wrap-email">
+                    <label for="email">Email<span class="req">*</span></label>
+                    <input id="email" name="email" type="email" required placeholder="you@example.com" />
+                    <div class="fieldError" id="err-email">Please enter a valid email address.</div>
+                  </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; margin-top:12px">
+                  <div class="formRow" id="wrap-subject">
+                    <label for="subject">Subject<span class="req">*</span></label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Select…</option>
+                      <option>GCSE Maths</option>
+                      <option>GCSE English Language</option>
+                      <option>GCSE English Literature</option>
+                      <option>GCSE Biology</option>
+                      <option>GCSE Chemistry</option>
+                      <option>GCSE Physics</option>
+                      <option>A-Level Maths</option>
+                      <option>A-Level Biology</option>
+                      <option>A-Level Chemistry</option>
+                      <option>A-Level Physics</option>
+                      <option>Study Buddy</option>
+                      <option>Small Class</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="fieldError" id="err-subject">Please select a subject.</div>
+                  </div>
+
+                  <div class="formRow" id="wrap-type">
+                    <label for="type">Tuition type<span class="req">*</span></label>
+                    <select id="type" name="type" required>
+                      <option value="">Select…</option>
+                      <option>1-to-1</option>
+                      <option>Small class</option>
+                      <option>Study Buddy (2 students)</option>
+                    </select>
+                    <div class="fieldError" id="err-type">Please select a tuition type.</div>
+                  </div>
+                </div>
+
+                <div class="formRow" id="wrap-message" style="margin-top:12px">
+                  <label for="message">Message<span class="req">*</span></label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Tell us the level, goals, and availability…"></textarea>
+                  <div class="fieldError" id="err-message">Please write a short message.</div>
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center">
+                  <button class="btn primary" type="submit">Send enquiry</button>
+                  <span class="muted tiny">Fields marked <span class="req">*</span> are required.</span>
+                </div>
+              </form>
+            </div>
+
+            <div class="card" style="box-shadow:none">
+              <h3 class="h3">Contact details</h3>
+              <p class="muted" style="margin-top:6px">
+                Admissions: <a href="mailto:admissions@edifyacademy.co.uk"><strong>admissions@edifyacademy.co.uk</strong></a><br/>
+                Safeguarding: <a href="mailto:safeguarding@edifyacademy.co.uk"><strong>safeguarding@edifyacademy.co.uk</strong></a>
+              </p>
+
+              <img
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=70"
+                alt="A bright classroom setting"
+                style="border-radius:16px; border:1px solid var(--border); margin-top:12px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <p class="muted tiny" style="margin-top:12px">
+            This form is live: it sends your enquiry to Google Sheets via your Apps Script.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footRow">
+      <div class="muted">
+        <strong style="color:var(--text)">Edify Academy</strong> • GCSE & A-Level tutoring •
+        <a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a>
+      </div>
+      <div class="footLinks">
+        <a href="#courses">Courses</a>
+        <a href="#free-trial">Free Trial</a>
+        <a href="#safeguarding">Safeguarding</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="tiny muted" style="margin-top:10px">
+      © <span id="year"></span> Edify Academy. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== SPA router (hash-based) =====
+  const pages = Array.from(document.querySelectorAll(".page"));
+  const navAnchors = Array.from(document.querySelectorAll('[data-route]'));
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  function setActive(route){
+    pages.forEach(p => p.classList.remove("active"));
+    const target = document.getElementById(route) || document.getElementById("home");
+    target.classList.add("active");
+
+    navAnchors.forEach(a => a.classList.remove("active"));
+    navAnchors.filter(a => a.getAttribute("data-route") === route).forEach(a => a.classList.add("active"));
+
+    mobileMenu.classList.remove("show");
+    burger.setAttribute("aria-expanded", "false");
+  }
+
+  function getRouteFromHash(){
+    const h = (location.hash || "#home").replace("#","");
+    return h || "home";
+  }
+
+  window.addEventListener("hashchange", () => setActive(getRouteFromHash()));
+  setActive(getRouteFromHash());
+
+  burger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("show");
+    burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ===== Courses tabs (GCSE vs A-Level) =====
+  const tabBtns = document.querySelectorAll(".tabBtn");
+  const gcseGrid = document.getElementById("gcseGrid");
+  const alevelGrid = document.getElementById("alevelGrid");
+
+  tabBtns.forEach(b => b.addEventListener("click", () => {
+    tabBtns.forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+
+    const level = b.dataset.level;
+    if(level === "gcse"){
+      gcseGrid.style.display = "grid";
+      alevelGrid.style.display = "none";
+      tabBtns[0].setAttribute("aria-selected","true");
+      tabBtns[1].setAttribute("aria-selected","false");
+    }else{
+      gcseGrid.style.display = "none";
+      alevelGrid.style.display = "grid";
+      tabBtns[0].setAttribute("aria-selected","false");
+      tabBtns[1].setAttribute("aria-selected","true");
+    }
+  }));
+
+  // ===== Form validation + Google Sheets integration =====
+  const form = document.getElementById("enquiryForm");
+  const errorBox = document.getElementById("errorBox");
+
+  function showError(idWrap, idErr, msg){
+    const wrap = document.getElementById(idWrap);
+    const err = document.getElementById(idErr);
+    wrap.classList.add("hasError");
+    err.textContent = msg;
+    err.style.display = "block";
+  }
+  function clearError(idWrap, idErr){
+    const wrap = document.getElementById(idWrap);
+    const err = document.getElementById(idErr);
+    wrap.classList.remove("hasError");
+    err.style.display = "none";
+  }
+
+  // Your Apps Script Web App URL (provided by you)
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzMQd65VBvXvrXNeFs8-kRDEi0b_MqMbvmV8uJ9jr0Yo61ILfnnDT8-0pVKNncYegNWow/exec";
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    errorBox.style.display = "none";
+    errorBox.textContent = "";
+    clearError("wrap-name","err-name");
+    clearError("wrap-email","err-email");
+    clearError("wrap-subject","err-subject");
+    clearError("wrap-type","err-type");
+    clearError("wrap-message","err-message");
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+    const type = document.getElementById("type");
+    const message = document.getElementById("message");
+
+    const errs = [];
+
+    if(!name.value.trim()){
+      errs.push("Full name is required.");
+      showError("wrap-name","err-name","Full name is required.");
+    }
+    if(!email.value.trim() || !email.checkValidity()){
+      errs.push("A valid email is required.");
+      showError("wrap-email","err-email","A valid email is required.");
+    }
+    if(!subject.value){
+      errs.push("Please select a subject.");
+      showError("wrap-subject","err-subject","Please select a subject.");
+    }
+    if(!type.value){
+      errs.push("Please select a tuition type.");
+      showError("wrap-type","err-type","Please select a tuition type.");
+    }
+    if(!message.value.trim()){
+      errs.push("Message is required.");
+      showError("wrap-message","err-message","Message is required.");
+    }
+
+    if(errs.length){
+      errorBox.style.display = "block";
+      errorBox.innerHTML = "<strong>Please fix the following:</strong><br/>• " + errs.join("<br/>• ");
+      errorBox.scrollIntoView({behavior:"smooth", block:"start"});
+      return;
+    }
+
+    try{
+      const payload = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        subject: subject.value,
+        tuition_type: type.value,
+        message: message.value.trim(),
+        page: "website",
+        timestamp: new Date().toISOString()
+      };
+
+      const res = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      alert("Thanks — your enquiry has been sent. We’ll get back to you soon.");
+      form.reset();
+    }catch(err){
+      alert("Something went wrong sending your enquiry. Please email admissions@edifyacademy.co.uk.");
+      console.error(err);
+    }
+  });
+</script>
 </body>
 </html>
