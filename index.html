@@ -1332,7 +1332,7 @@
         timestamp: new Date().toISOString()
       };
 
-      const res = await fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbz3gISlMEPo211bQpyKlu4xMwBJOPeGBjK8B8L2bjCG_VFrOeWoWMl5CF6Eq8Tjivlh/exec", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
