@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Edify Academy | GCSE & A-Level Tutors in Slough & Berkshire</title>
 
-  <meta name="description" content="Edify Academy provides GCSE and A-Level tutoring with experienced tutors. 1-to-1, small classes, and Study Buddy sessions. Book a free session today." />
+  <meta name="description" content="Edify Academy provides structured GCSE & A-Level tutoring. Currently enrolling for GCSE Maths. Register interest for other subjects." />
   <meta name="keywords" content="tuition, tutor, tutoring, GCSE tutor, A-Level tutor, Slough tutor, tuition centre, maths tutor, english tutor, physics tutor, biology tutor, chemistry tutor, private tuition, small group tuition, study buddy tuition" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
   <meta property="og:title" content="Edify Academy | GCSE & A-Level Tutors" />
-  <meta property="og:description" content="GCSE & A-Level tutoring with experienced tutors. 1-to-1, classes, and Study Buddy. Book a free session." />
+  <meta property="og:description" content="Structured tutoring with clear plans, exam practice, and useful feedback. Currently enrolling for GCSE Maths." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://raw.githubusercontent.com/SJ778778/edifyacademy.co.uk/main/assets/ChatGPT%20Image%20Jan%201%2C%202026%2C%2006_42_09%20PM.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,7 @@
     "name":"Edify Academy",
     "url":"https://edifyacademy.co.uk",
     "email":"admissions@edifyacademy.co.uk",
-    "description":"GCSE and A-Level tutoring with experienced tutors. 1-to-1, small classes, and Study Buddy.",
+    "description":"Structured GCSE and A-Level tutoring. Currently enrolling for GCSE Maths. Register interest for other subjects.",
     "areaServed":[
       {"@type":"City","name":"Slough"},
       {"@type":"AdministrativeArea","name":"Berkshire"},
@@ -42,10 +42,9 @@
       --text:#0b1220;
       --muted:#5c6475;
 
-      /* Theme (blue) */
-      --brand:#1e4fbf;     /* primary blue */
-      --brand-2:#3b82f6;   /* accent blue (replaces yellow) */
-      --brand-3:#0f2f7a;   /* darker blue */
+      --brand:#1e4fbf;
+      --brand-2:#3b82f6;
+      --brand-3:#0f2f7a;
       --border:#e8ebf2;
       --card:#ffffff;
       --shadow: 0 10px 30px rgba(14, 22, 44, .08);
@@ -70,6 +69,7 @@
 
     .container{width:min(1120px, 92vw); margin-inline:auto}
     .grid{display:grid; gap:18px}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:.55rem;
@@ -78,7 +78,7 @@
       border:1px solid var(--border);
       background:var(--card);
       text-decoration:none;
-      font-weight:700;
+      font-weight:950;
       transition:.2s;
       cursor:pointer;
       white-space:nowrap;
@@ -86,15 +86,8 @@
     .btn:hover{transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.06)}
     .btn.primary{background:var(--brand); border-color:var(--brand); color:white}
     .btn.accent{background:var(--brand-2); border-color:var(--brand-2); color:white}
+    .btn.big{padding:14px 18px; font-size:16px}
 
-    .chip{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:13px; font-weight:700;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid var(--border);
-      color:var(--brand-3);
-      background:#f6f8ff;
-    }
     .card{
       background:var(--card);
       border:1px solid var(--border);
@@ -102,13 +95,14 @@
       box-shadow: var(--shadow);
       padding:18px;
     }
+
     .muted{color:var(--muted)}
-    .h1{font-size:clamp(38px, 4vw, 54px); line-height:1.10; margin:0} /* bigger */
+    .h1{font-size:clamp(38px, 4vw, 54px); line-height:1.10; margin:0}
     .h2{font-size:clamp(22px, 2.2vw, 30px); margin:0 0 8px}
     .h3{font-size:18px; margin:0 0 6px}
-    .lead{font-size:20px; color:var(--muted); margin:10px 0 0} /* bigger */
+    .lead{font-size:20px; color:var(--muted); margin:10px 0 0}
     .section{padding:54px 0}
-    .kicker{color:var(--brand); font-weight:800; letter-spacing:.02em; text-transform:uppercase; font-size:12px}
+    .kicker{color:var(--brand); font-weight:950; letter-spacing:.02em; text-transform:uppercase; font-size:12px}
 
     header{
       position:sticky; top:0; z-index:50;
@@ -127,30 +121,29 @@
       min-width: 240px;
     }
     .brand img{
-      width: 114px;   /* larger logo */
-      height: 114px;  /* larger logo */
+      width: 94px;
+      height: 94px;
       object-fit: contain;
       background: transparent;
     }
     .brand strong{font-size:18px}
     nav{display:flex; align-items:center; gap:10px}
 
-    /* KEEP NAV TABS IN ONE LINE */
     .navlinks{
       display:flex;
       gap:6px;
       align-items:center;
-      flex-wrap:nowrap;       /* no wrapping */
+      flex-wrap:nowrap;
       white-space:nowrap;
     }
     .navlinks a{
-      padding:10px 10px;      /* slightly tighter */
+      padding:10px 10px;
       border-radius:999px;
       text-decoration:none;
-      font-weight:750;
+      font-weight:950;
       color:var(--brand-3);
       border:1px solid transparent;
-      font-size:14px;         /* slightly smaller only to fit one line */
+      font-size:14px;
     }
     .navlinks a:hover{background:#f5f7ff; border-color:#e7ebff}
     .navlinks a.active{background:#eef2ff; border-color:#dde6ff}
@@ -170,16 +163,11 @@
       align-items:center;
       justify-content:center;
       gap:6px;
-      font-weight:800;
+      font-weight:950;
     }
     .burger .lines{display:grid; gap:4px}
-    .burger span{
-      width:18px; height:2px; background:var(--brand-3); display:block; border-radius:2px;
-    }
-    .mobileMenu{
-      display:none;
-      padding:0 0 14px;
-    }
+    .burger span{width:18px; height:2px; background:var(--brand-3); display:block; border-radius:2px;}
+    .mobileMenu{display:none; padding:0 0 14px;}
     .mobileMenu .menuCard{
       border:1px solid var(--border);
       border-radius:16px;
@@ -192,7 +180,7 @@
       padding:12px 12px;
       border-radius:12px;
       text-decoration:none;
-      font-weight:800;
+      font-weight:950;
       color:var(--brand-3);
     }
     .mobileMenu a:hover{background:#f6f8ff}
@@ -204,18 +192,66 @@
       .mobileMenu.show{display:block}
     }
 
+    /* Status bar (no dates) */
+    .statusBar{
+      background: rgba(30,79,191,.06);
+      border-bottom: 1px solid var(--border);
+      font-weight: 950;
+      color: var(--brand-3);
+      font-size: 13px;
+    }
+    .statusBar .inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:10px 0;
+      flex-wrap: wrap;
+    }
+    .statusTag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(30,79,191,.22);
+      background: rgba(30,79,191,.10);
+    }
+    .statusDot{ width:8px; height:8px; border-radius:99px; background: var(--ok); }
+
+    /* Hero */
     .heroWrap{
       padding:34px 0 18px;
       background:
         radial-gradient(900px 260px at 10% 10%, rgba(30,79,191,.10), transparent 60%),
         radial-gradient(700px 240px at 90% 30%, rgba(59,130,246,.16), transparent 62%);
       border-bottom:1px solid var(--border);
+      position:relative;
+      overflow:hidden;
     }
+    .heroWrap::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(600px 300px at 20% 20%, rgba(59,130,246,.12), transparent 60%),
+        radial-gradient(500px 260px at 80% 40%, rgba(30,79,191,.10), transparent 60%);
+      animation: floatGlow 10s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes floatGlow{
+      0%{ transform: translate3d(-1%, -1%, 0) }
+      50%{ transform: translate3d(1%, 1%, 0) }
+      100%{ transform: translate3d(-1%, -1%, 0) }
+    }
+
     .hero{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap:18px;
       align-items:stretch;
+      position:relative;
+      z-index:1;
     }
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
@@ -237,12 +273,49 @@
       border-radius:12px;
       background: rgba(30,79,191,.12);
       display:inline-flex; align-items:center; justify-content:center;
-      font-weight:900; color:var(--brand);
+      font-weight:950; color:var(--brand);
     }
+
+    /* How it works */
+    .howSplit{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){
+      .howSplit{grid-template-columns:1fr}
+    }
+    .steps{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .step{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    .stepNum{
+      width:34px; height:34px;
+      border-radius:12px;
+      background: rgba(30,79,191,.12);
+      color: var(--brand-3);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:950;
+      flex: 0 0 auto;
+    }
+    .step strong{display:block; color:var(--brand-3)}
+    .step span{display:block; color:var(--muted); font-size:14px; margin-top:2px}
 
     .req{color:var(--danger); margin-left:4px}
     .formRow{display:grid; gap:8px}
-    label{font-weight:800}
+    label{font-weight:950}
     input, select, textarea{
       width:100%;
       padding:12px 12px;
@@ -253,27 +326,6 @@
       outline:none;
     }
     input:focus, select:focus, textarea:focus{border-color: rgba(30,79,191,.55); box-shadow: 0 0 0 4px rgba(30,79,191,.12)}
-    .errorBox{
-      display:none;
-      border:1px solid rgba(192,31,46,.35);
-      background:var(--danger-bg);
-      color:#7a1020;
-      border-radius:14px;
-      padding:12px;
-      font-weight:800;
-      margin-bottom:12px;
-    }
-    .fieldError{
-      display:none;
-      color:var(--danger);
-      font-weight:800;
-      margin-top:-2px;
-      font-size:13px;
-    }
-    .hasError input, .hasError select, .hasError textarea{
-      border-color: rgba(192,31,46,.45);
-      box-shadow: 0 0 0 4px rgba(192,31,46,.10);
-    }
 
     .contactSplit{grid-template-columns: 1.2fr .8fr; align-items:start}
     @media (max-width: 900px){ .contactSplit{grid-template-columns:1fr} }
@@ -304,10 +356,10 @@
       border-radius:12px;
       border:1px solid var(--border);
       background:white;
-      font-weight:800;
+      font-weight:950;
     }
 
-    /* ===== Courses replacement styles (from your newer courses code) ===== */
+    /* Courses */
     .tabs{
       display:flex;
       gap:10px;
@@ -319,7 +371,7 @@
       background:#fff;
       padding:10px 12px;
       border-radius:999px;
-      font-weight:800;
+      font-weight:950;
       cursor:pointer;
       color:var(--brand-3);
       font-size:15px;
@@ -368,11 +420,16 @@
       border-radius:999px;
       border:1px solid rgba(30,79,191,.20);
       background: rgba(30,79,191,.10);
-      font-weight:900;
+      font-weight:950;
       font-size:12px;
       color: var(--brand-3);
       white-space:nowrap;
       height:fit-content;
+    }
+    .pill.notEnrolling{
+      background: rgba(192,31,46,.08);
+      border-color: rgba(192,31,46,.25);
+      color: #7a1020;
     }
     .courseBody{ padding:12px 16px 16px; }
     details{
@@ -384,7 +441,7 @@
     }
     summary{
       cursor:pointer;
-      font-weight:900;
+      font-weight:950;
       color:var(--brand-3);
       list-style:none;
     }
@@ -396,10 +453,76 @@
       font-size:15px;
     }
     .topicList li{ margin:6px 0; }
+
+    /* Bigger contact blocks */
+    .contactBlock{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      background:#fff;
+      display:grid;
+      gap:10px;
+    }
+    .contactLine{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(30,79,191,.15);
+      background: rgba(30,79,191,.06);
+      font-weight:950;
+      font-size:18px;
+      color:var(--brand-3);
+    }
+    .contactLine a{ text-decoration:none; }
+    .contactHint{ font-size:13px; color:var(--muted); margin-top:-2px; }
+
+    /* Motion */
+    @media (prefers-reduced-motion: reduce){
+      *{ animation: none !important; transition: none !important; scroll-behavior:auto !important; }
+    }
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Mobile bottom CTA */
+    .mobileCta{
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 60;
+      display: none;
+    }
+    .mobileCta .ctaCard{
+      display:flex;
+      gap:10px;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 14px 40px rgba(14,22,44,.14);
+    }
+    @media (max-width: 900px){
+      .mobileCta{ display:block; }
+      footer{ padding-bottom: 90px; }
+    }
   </style>
 </head>
 
 <body>
+
 <header>
   <div class="container">
     <div class="topbar">
@@ -423,7 +546,7 @@
           <a href="#vacancies" data-route="vacancies">Vacancies</a>
           <a href="#safeguarding" data-route="safeguarding">Safeguarding</a>
           <a href="#contact" data-route="contact">Contact</a>
-          <a class="trial" href="#free-trial" data-route="free-trial">Free Trial</a>
+          <a class="trial" href="#trial" data-route="trial">Book Trial</a>
         </div>
 
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
@@ -443,11 +566,19 @@
         <a href="#vacancies" data-route="vacancies">Vacancies</a>
         <a href="#safeguarding" data-route="safeguarding">Safeguarding</a>
         <a href="#contact" data-route="contact">Contact</a>
-        <a class="trial" href="#free-trial" data-route="free-trial">Free Trial</a>
+        <a class="trial" href="#trial" data-route="trial">Book Trial</a>
       </div>
     </div>
   </div>
 </header>
+
+<!-- Status bar (no dates) -->
+<div class="statusBar">
+  <div class="container inner">
+    <span class="statusTag"><span class="statusDot"></span> Currently enrolling: GCSE Maths</span>
+    <span class="muted">Other subjects: register interest (not currently enrolling)</span>
+  </div>
+</div>
 
 <main>
 
@@ -457,31 +588,31 @@
       <div class="container hero">
         <div class="card">
           <div class="kicker">Tuition that builds confidence</div>
-          <h1 class="h1">Clear, structured GCSE & A-Level tuition — built around your child.</h1>
-          <p class="lead">
-            We teach in a calm, supportive way, but we keep standards high. Every lesson has a clear plan,
-            targeted exam preparation, and feedback students can actually use.
-          </p>
-          <p class="muted">
-  We support students across Slough and nearby areas including Langley, Windsor, and Maidenhead.
-</p>
 
+          <h1 class="h1">GCSE Maths tuition with a clear plan — and measurable progress.</h1>
+
+          <p class="lead">
+            Calm teaching, high standards. We focus on the exact skills and question types that turn effort into marks.
+          </p>
+
+          <p class="muted">
+            <strong>Currently enrolling:</strong> GCSE Maths (Foundation & Higher). We list other subjects so you can register interest — but we are not currently enrolling for them.
+          </p>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-            <a class="btn accent" href="#free-trial">Book free session</a>
-            <a class="btn primary" href="#courses">Explore courses</a>
-            <a class="btn" href="#contact">Send an enquiry</a>
+            <a class="btn accent big" href="#trial">Book trial (GCSE Maths)</a>
+            <a class="btn primary big" href="tel:+443333357394">Call: 0333 335 7394</a>
+            <a class="btn" href="#courses">Explore courses</a>
           </div>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
             <span class="badge">✅ GCSE</span>
-            <span class="badge">✅ A-Level</span>
             <span class="badge">✅ 1-to-1 • Small classes • Study Buddy</span>
+            <span class="badge">✅ Slough • Langley • Windsor • Maidenhead</span>
           </div>
 
           <p class="muted" style="margin-top:14px">
-            Parents tell us they like how organised the teaching is — students know exactly what to revise,
-            what they’re improving, and what to focus on next.
+            Parents choose Edify when they want structure, consistency, and honest feedback — not random worksheets and vague “tips”.
           </p>
         </div>
 
@@ -495,7 +626,7 @@
       </div>
     </div>
 
-    <!-- Simple home formats (kept) -->
+    <!-- Formats -->
     <div class="section homeOnly" style="padding-top:24px;">
       <div class="container">
         <div class="grid offerGrid">
@@ -515,11 +646,75 @@
             <p class="muted">Two students at a similar level. Personalised lessons at a reduced rate.</p>
           </div>
         </div>
+
+        <!-- How it works + extra image -->
+        <div class="howSplit">
+          <div class="card">
+            <div class="kicker">How it works</div>
+            <h2 class="h2">A simple system parents can trust.</h2>
+            <p class="muted" style="margin-top:6px">
+              Most tuition fails because it’s inconsistent. We keep it structured so students know exactly what they’re working on and why.
+            </p>
+
+            <div class="steps" aria-label="How it works steps">
+              <div class="step">
+                <div class="stepNum">1</div>
+                <div>
+                  <strong>Assess</strong>
+                  <span>Quick diagnostic to identify gaps and confidence level (Foundation vs Higher).</span>
+                </div>
+              </div>
+              <div class="step">
+                <div class="stepNum">2</div>
+                <div>
+                  <strong>Plan</strong>
+                  <span>We map a topic pathway so lessons build logically (not random).</span>
+                </div>
+              </div>
+              <div class="step">
+                <div class="stepNum">3</div>
+                <div>
+                  <strong>Teach</strong>
+                  <span>Clear explanation + worked examples + guided practice.</span>
+                </div>
+              </div>
+              <div class="step">
+                <div class="stepNum">4</div>
+                <div>
+                  <strong>Practice</strong>
+                  <span>Exam-style questions (the exact wording students get in papers).</span>
+                </div>
+              </div>
+              <div class="step">
+                <div class="stepNum">5</div>
+                <div>
+                  <strong>Track</strong>
+                  <span>Regular checkpoints so we can adjust focus and avoid wasted time.</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+              <a class="btn accent big" href="#trial">Book trial</a>
+              <a class="btn primary big" href="tel:+443333357394">Call now</a>
+            </div>
+          </div>
+
+          <div class="card" style="padding:0; overflow:hidden">
+            <img
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=70"
+              alt="Tutor supporting students in a classroom"
+              loading="lazy"
+              style="width:100%; height:100%; object-fit:cover; min-height: 380px;"
+            />
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- COURSES (REPLACED) -->
+  <!-- COURSES -->
   <section id="courses" class="page">
     <div class="section">
       <div class="container">
@@ -527,8 +722,7 @@
           <div class="kicker">Courses</div>
           <h2 class="h2">Targeted exam preparation.</h2>
           <p class="muted">
-            Choose GCSE or A-Level below. Each course follows a structured pathway with topic teaching,
-            exam practice, and clear feedback for next steps.
+            GCSE Maths is currently open for enrolment. Other subjects are visible below as “Not currently enrolling” so you can register interest.
           </p>
 
           <div class="tabs" role="tablist" aria-label="Course level tabs">
@@ -538,15 +732,21 @@
 
           <!-- GCSE GRID -->
           <div class="courseGrid" id="gcseGrid">
+
+            <!-- GCSE Mathematics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE Mathematics</strong>
                   <span>Foundation & Higher • Edexcel / AQA / OCR style support</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill">Enrolling now</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Currently enrolling for GCSE Maths (Foundation & Higher). Placement decided after your first session.
+                </p>
+
                 <details open>
                   <summary>Number</summary>
                   <ul class="topicList">
@@ -590,15 +790,20 @@
               </div>
             </article>
 
+            <!-- GCSE English Language -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE English Language</strong>
                   <span>Reading & Writing • Analysis • Transactional writing</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Reading skills</summary>
                   <ul class="topicList">
@@ -632,15 +837,20 @@
               </div>
             </article>
 
+            <!-- GCSE English Literature -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE English Literature</strong>
                   <span>Texts, themes, quotation mastery, essay structure</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Core essay skills</summary>
                   <ul class="topicList">
@@ -674,15 +884,20 @@
               </div>
             </article>
 
+            <!-- GCSE Biology -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE Biology</strong>
                   <span>Core biology + required practicals + exam technique</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Cells & organisation</summary>
                   <ul class="topicList">
@@ -716,15 +931,20 @@
               </div>
             </article>
 
+            <!-- GCSE Chemistry -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE Chemistry</strong>
                   <span>Foundation & Higher • Calculations + required practicals</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Atomic structure & bonding</summary>
                   <ul class="topicList">
@@ -758,15 +978,20 @@
               </div>
             </article>
 
+            <!-- GCSE Physics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>GCSE Physics</strong>
                   <span>Forces • Energy • Electricity • Waves • Space (spec dependent)</span>
                 </div>
-                <span class="pill">GCSE</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Energy & forces</summary>
                   <ul class="topicList">
@@ -799,19 +1024,26 @@
                 </details>
               </div>
             </article>
+
           </div>
 
           <!-- A-LEVEL GRID -->
           <div class="courseGrid" id="alevelGrid" style="display:none;">
+
+            <!-- A-Level Mathematics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>A-Level Mathematics</strong>
                   <span>Pure • Mechanics • Statistics (spec dependent)</span>
                 </div>
-                <span class="pill">A-LEVEL</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Pure Mathematics</summary>
                   <ul class="topicList">
@@ -845,15 +1077,20 @@
               </div>
             </article>
 
+            <!-- A-Level Biology -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>A-Level Biology</strong>
                   <span>Core topics • Practical skills • Application questions</span>
                 </div>
-                <span class="pill">A-LEVEL</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Biological molecules & cells</summary>
                   <ul class="topicList">
@@ -877,15 +1114,20 @@
               </div>
             </article>
 
+            <!-- A-Level Chemistry -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>A-Level Chemistry</strong>
                   <span>Physical • Inorganic • Organic • Practical mastery</span>
                 </div>
-                <span class="pill">A-LEVEL</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Physical chemistry</summary>
                   <ul class="topicList">
@@ -909,15 +1151,20 @@
               </div>
             </article>
 
+            <!-- A-Level Physics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
                   <strong>A-Level Physics</strong>
                   <span>Mechanics • Fields • Circuits • Waves • Quantum (spec dependent)</span>
                 </div>
-                <span class="pill">A-LEVEL</span>
+                <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
+                <p class="muted" style="margin:0 0 10px;">
+                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
+                </p>
+
                 <details open>
                   <summary>Mechanics & materials</summary>
                   <ul class="topicList">
@@ -940,11 +1187,13 @@
                 </details>
               </div>
             </article>
+
           </div>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px">
-            <a class="btn accent" href="#free-trial">Book free session</a>
-            <a class="btn primary" href="#contact">Ask a question</a>
+            <a class="btn accent big" href="#trial">Book trial (GCSE Maths)</a>
+            <a class="btn primary big" href="tel:+443333357394">Call to book</a>
+            <a class="btn" href="#contact">Register interest / ask a question</a>
           </div>
 
         </div>
@@ -960,27 +1209,32 @@
           <div class="kicker">Admissions</div>
           <h2 class="h2">How to start</h2>
           <p class="muted">
-            Send a quick message with the subject, year group, and availability. We’ll reply with the best option
-            (1-to-1, small class, or Study Buddy), and the next available times.
-          </p>
-          <p class="muted">
-            If you’re not sure which exam board your child is doing, that’s fine — we’ll guide you.
-          </p>
-          <p class="muted">
-            Email: <a href="mailto:admissions@edifyacademy.co.uk"><strong>admissions@edifyacademy.co.uk</strong></a>
+            Start with a GCSE Maths trial session. We assess gaps, confirm level, and recommend the best format (1-to-1, small class, or Study Buddy).
           </p>
 
-          <div class="card" style="box-shadow:none; margin-top:14px; border-style:dashed">
-            <div class="kicker" style="margin-bottom:6px">Why choose us</div>
-            <p class="muted" style="margin:0">
-              We’re experienced classroom teachers and tutors who know what exam boards reward — and how to teach it clearly.
-              Lessons are structured, students get regular exam practice, and parents get honest feedback about what’s improving and what to focus on next.
-            </p>
+          <div class="contactBlock" style="margin-top:14px;">
+            <div class="contactLine">
+              📞 <a href="tel:+443333357394">0333 335 7394</a>
+            </div>
+            <div class="contactHint">Call to book a trial slot.</div>
+
+            <div class="contactLine">
+              ✉️ <a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a>
+            </div>
+            <div class="contactHint">Email us the student’s year group and availability.</div>
           </div>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-            <a class="btn accent" href="#free-trial">Book free session</a>
-            <a class="btn primary" href="#contact">Send an enquiry</a>
+            <a class="btn accent big" href="#trial">Book trial</a>
+            <a class="btn primary big" href="tel:+443333357394">Call now</a>
+            <a class="btn" href="#contact">Send an enquiry</a>
+          </div>
+
+          <div class="card" style="box-shadow:none; margin-top:14px; border-style:dashed">
+            <div class="kicker" style="margin-bottom:6px">What parents get</div>
+            <p class="muted" style="margin:0">
+              Clear structure, exam-style practice, and feedback that shows what’s improving and what to focus on next.
+            </p>
           </div>
         </div>
       </div>
@@ -1052,7 +1306,6 @@
             Download our safeguarding policy below.
           </p>
 
-          <!-- IMPORTANT: Replace with your GitHub RAW PDF link -->
           <a class="btn primary" href="assets/Edify-Academy-Safeguarding-Policy.pdf" download>
             👉 Download our Safeguarding Policy (PDF)
           </a>
@@ -1061,203 +1314,162 @@
     </div>
   </section>
 
-<!-- FREE TRIAL -->
-<section id="free-trial" class="page">
-  <div class="section">
-    <div class="container">
-      <div class="card">
-        <div class="kicker">Free Session</div>
+  <!-- TRIAL -->
+  <section id="trial" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Trial Session</div>
+          <h2 class="h2">Book a GCSE Maths trial session</h2>
 
-        <h2 class="h2">Contact us to arrange a free session</h2>
+          <p class="muted">
+            Call us to reserve a trial slot. We use the trial session to assess level (Foundation or Higher) and explain how our structured programme works.
+          </p>
 
-        <p class="muted">
-          To arrange a free session or discuss the most suitable support for your child,
-          please contact us by email or phone.
-        </p>
+          <div class="contactBlock" style="margin-top:14px;">
+            <div class="contactLine">
+              📞 <a href="tel:+443333357394">0333 335 7394</a>
+            </div>
+            <div class="contactHint">Calls only at the moment.</div>
 
-        <p style="margin-top:20px; font-weight:600; line-height:1.6;">
-          📧 <a href="mailto:admissions@edifyacademy.co.uk" style="color:#1aa6a6;">
-            admissions@edifyacademy.co.uk
-          </a><br>
-          ☎️ <a href="tel:+447000000000" style="color:#1aa6a6;">
-            0333 335 7394
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="contactLine">
+              ✉️ <a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a>
+            </div>
+            <div class="contactHint">Email the year group and availability (optional).</div>
 
-
-<!-- CONTACT -->
-<section id="contact" class="page">
-  <div class="section">
-    <div class="container">
-      <div class="card">
-        <div class="kicker">Contact</div>
-        <h2 class="h2">Send an enquiry</h2>
-
-        <div class="grid contactSplit" style="margin-top:14px">
-          <!-- FORM -->
-          <div class="card" style="box-shadow:none">
-
-            <form
-              action="https://formspree.io/f/meeolzra"
-              method="POST"
-            >
-
-              <!-- Name / Email / Phone -->
-              <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px">
-
-                <div class="formRow">
-                  <label for="name">
-                    Full name<span class="req">*</span>
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div class="formRow">
-                  <label for="email">
-                    Email<span class="req">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                  />
-                </div>
-
-                <div class="formRow">
-                  <label for="phone">
-                    Contact number<span class="req">*</span>
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    placeholder="e.g. 07123 456789"
-                  />
-                </div>
-
-              </div>
-
-              <!-- Subject / Tuition type -->
-              <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px">
-
-                <div class="formRow">
-                  <label for="subject">
-                    Subject<span class="req">*</span>
-                  </label>
-                  <select id="subject" name="subject" required>
-                    <option value="">Select…</option>
-                    <option>GCSE Maths</option>
-                    <option>GCSE English Language</option>
-                    <option>GCSE English Literature</option>
-                    <option>GCSE Biology</option>
-                    <option>GCSE Chemistry</option>
-                    <option>GCSE Physics</option>
-                    <option>A-Level Maths</option>
-                    <option>A-Level Biology</option>
-                    <option>A-Level Chemistry</option>
-                    <option>A-Level Physics</option>
-                    <option>Study Buddy</option>
-                    <option>Small Class</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div class="formRow">
-                  <label for="type">
-                    Tuition type<span class="req">*</span>
-                  </label>
-                  <select id="type" name="type" required>
-                    <option value="">Select…</option>
-                    <option>1-to-1</option>
-                    <option>Small class</option>
-                    <option>Study Buddy (2 students)</option>
-                  </select>
-                </div>
-
-              </div>
-
-              <!-- Message -->
-              <div class="formRow" style="margin-top:12px">
-                <label for="message">
-                  Message<span class="req">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                  placeholder="Tell us the level, goals, and availability…"
-                ></textarea>
-              </div>
-
-              <!-- Hidden Formspree helpers -->
-              <input type="hidden" name="_subject" value="New Website Enquiry – Edify Academy">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="false">
-
-              <!-- Submit -->
-              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center">
-                <button class="btn primary" type="submit">
-                  Send enquiry
-                </button>
-                <span class="muted tiny">
-                  Fields marked <span class="req">*</span> are required.
-                </span>
-              </div>
-
-            </form>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:4px;">
+              <a class="btn primary big" href="tel:+443333357394">Call to book</a>
+              <a class="btn accent big" href="#contact">Send enquiry</a>
+            </div>
           </div>
 
-          <!-- CONTACT DETAILS -->
-          <div class="card" style="box-shadow:none">
-            <h3 class="h3">Contact details</h3>
-            <p class="muted" style="margin-top:6px">
-              Admissions:
-              <a href="mailto:admissions@edifyacademy.co.uk">
-                <strong>admissions@edifyacademy.co.uk</strong>
-              </a><br/>
-              Safeguarding:
-              <a href="mailto:safeguarding@edifyacademy.co.uk">
-                <strong>safeguarding@edifyacademy.co.uk</strong>
-              </a><br/><br/>
-
-              <p style="margin-top:10px; font-size:14px; color:#555;">
-                Contact number: <strong>0333 335 7394</strong>
-              </p>
-
-            </p>
-
-            <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=70"
-              alt="A bright classroom setting"
-              style="border-radius:16px; border:1px solid var(--border); margin-top:12px"
-              loading="lazy"
-            />
-          </div>
+          <p class="muted tiny" style="margin-top:12px">
+            Other subjects are not currently enrolling. Register interest via the enquiry form and we’ll contact you when places open.
+          </p>
         </div>
-
-        <p class="muted tiny" style="margin-top:12px">
-          This form sends enquiries directly to Edify Academy admissions.
-        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <div class="section">
+      <div class="container">
+        <div class="card">
+          <div class="kicker">Contact</div>
+          <h2 class="h2">Send an enquiry / register interest</h2>
+
+          <div class="grid contactSplit" style="margin-top:14px">
+            <!-- FORM -->
+            <div class="card" style="box-shadow:none">
+              <form action="https://formspree.io/f/meeolzra" method="POST">
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px">
+                  <div class="formRow">
+                    <label for="name">Full name<span class="req">*</span></label>
+                    <input id="name" name="name" type="text" required placeholder="Your name" />
+                  </div>
+
+                  <div class="formRow">
+                    <label for="email">Email<span class="req">*</span></label>
+                    <input id="email" name="email" type="email" required placeholder="you@example.com" />
+                  </div>
+
+                  <div class="formRow">
+                    <label for="phone">Contact number<span class="req">*</span></label>
+                    <input id="phone" name="phone" type="tel" required placeholder="e.g. 07123 456789" />
+                  </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px">
+                  <div class="formRow">
+                    <label for="subject">Subject<span class="req">*</span></label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Select…</option>
+
+                      <optgroup label="Currently enrolling">
+                        <option>GCSE Maths</option>
+                      </optgroup>
+
+                      <optgroup label="Not currently enrolling (register interest)">
+                        <option>GCSE English Language</option>
+                        <option>GCSE English Literature</option>
+                        <option>GCSE Biology</option>
+                        <option>GCSE Chemistry</option>
+                        <option>GCSE Physics</option>
+                        <option>A-Level Maths</option>
+                        <option>A-Level Biology</option>
+                        <option>A-Level Chemistry</option>
+                        <option>A-Level Physics</option>
+                        <option>Other</option>
+                      </optgroup>
+                    </select>
+                  </div>
+
+                  <div class="formRow">
+                    <label for="type">Tuition type<span class="req">*</span></label>
+                    <select id="type" name="type" required>
+                      <option value="">Select…</option>
+                      <option>1-to-1</option>
+                      <option>Small class</option>
+                      <option>Study Buddy (2 students)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="formRow" style="margin-top:12px">
+                  <label for="message">Message<span class="req">*</span></label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Tell us the year group, goals, and availability…"></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Website Enquiry – Edify Academy">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center">
+                  <button class="btn accent big" type="submit">Send enquiry</button>
+                  <a class="btn primary big" href="tel:+443333357394">Call us</a>
+                </div>
+              </form>
+            </div>
+
+            <!-- CONTACT DETAILS -->
+            <div class="card" style="box-shadow:none">
+              <h3 class="h3">Fastest way to reach us</h3>
+
+              <div class="contactBlock" style="margin-top:10px;">
+                <div class="contactLine">
+                  📞 <a href="tel:+443333357394">0333 335 7394</a>
+                </div>
+                <div class="contactHint">Calls only at the moment.</div>
+
+                <div class="contactLine">
+                  ✉️ <a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a>
+                </div>
+                <div class="contactHint">Email is fine too (we respond as quickly as possible).</div>
+
+                <div class="contactLine" style="background:rgba(30,79,191,.04); border-color:rgba(30,79,191,.12);">
+                  🛡️ <a href="mailto:safeguarding@edifyacademy.co.uk">safeguarding@edifyacademy.co.uk</a>
+                </div>
+                <div class="contactHint">Safeguarding contact.</div>
+              </div>
+
+              <img
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=70"
+                alt="A bright classroom setting"
+                style="border-radius:16px; border:1px solid var(--border); margin-top:12px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <p class="muted tiny" style="margin-top:12px">
+            This form sends enquiries directly to Edify Academy admissions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
@@ -1270,7 +1482,7 @@
       </div>
       <div class="footLinks">
         <a href="#courses">Courses</a>
-        <a href="#free-trial">Free Trial</a>
+        <a href="#trial">Book Trial</a>
         <a href="#safeguarding">Safeguarding</a>
         <a href="#contact">Contact</a>
       </div>
@@ -1280,6 +1492,17 @@
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA -->
+<div class="mobileCta" aria-label="Quick actions">
+  <div class="ctaCard">
+    <div>
+      <div style="font-weight:950; color:var(--brand-3); line-height:1.1;">GCSE Maths trial</div>
+      <div class="muted tiny">Call to reserve a slot</div>
+    </div>
+    <a class="btn primary" href="tel:+443333357394">Call</a>
+  </div>
+</div>
 
 <script>
   // ===== SPA router (hash-based) =====
@@ -1298,6 +1521,8 @@
 
     mobileMenu.classList.remove("show");
     burger.setAttribute("aria-expanded", "false");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function getRouteFromHash(){
@@ -1339,6 +1564,18 @@
     }
   }));
 
+  // ===== Scroll reveal =====
+  const revealEls = document.querySelectorAll(".card, .courseCard, .heroImg");
+  revealEls.forEach(el => el.classList.add("reveal"));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) e.target.classList.add("show");
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => io.observe(el));
 </script>
 </body>
 </html>
+
