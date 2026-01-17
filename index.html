@@ -3,18 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Edify Academy | GCSE & A-Level Tutors in Slough & Berkshire</title>
 
-  <meta name="description" content="Edify Academy provides structured GCSE & A-Level tutoring. Currently enrolling for GCSE Maths. Register interest for other subjects." />
-  <meta name="keywords" content="tuition, tutor, tutoring, GCSE tutor, A-Level tutor, Slough tutor, tuition centre, maths tutor, english tutor, physics tutor, biology tutor, chemistry tutor, private tuition, small group tuition, study buddy tuition" />
+  <title>Edify Academy | GCSE Maths Tutors in Slough & Berkshire (Foundation & Higher)</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://edifyacademy.co.uk" />
+
+  <!-- FAVICON (cache-bust). Put favicon.ico in your SITE ROOT (same folder as index.html) -->
+  <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico?v=3" type="image/x-icon">
+  <!-- Optional: if you also have png -->
+  <!-- <link rel="icon" href="/favicon.png?v=3" type="image/png"> -->
+
+  <meta name="description" content="Edify Academy provides structured GCSE Maths tuition in Slough & Berkshire. Foundation & Higher. Clear lesson plans, exam-style practice, and measurable progress. Calls only: 0333 335 7394." />
+  <meta name="keywords" content="GCSE Maths tutor Slough, tuition centre Slough, GCSE Maths Foundation Higher, Maths tuition Berkshire, Edexcel GCSE Maths, AQA GCSE Maths, OCR GCSE Maths" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
-  <meta property="og:title" content="Edify Academy | GCSE & A-Level Tutors" />
-  <meta property="og:description" content="Structured tutoring with clear plans, exam practice, and useful feedback. Currently enrolling for GCSE Maths." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Edify Academy | GCSE Maths Tutors in Slough & Berkshire" />
+  <meta property="og:description" content="Structured GCSE Maths tuition (Foundation & Higher). Clear plans, exam practice, and measurable progress." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://edifyacademy.co.uk" />
   <meta property="og:image" content="https://raw.githubusercontent.com/SJ778778/edifyacademy.co.uk/main/assets/ChatGPT%20Image%20Jan%201%2C%202026%2C%2006_42_09%20PM.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Local SEO + org schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -22,7 +35,8 @@
     "name":"Edify Academy",
     "url":"https://edifyacademy.co.uk",
     "email":"admissions@edifyacademy.co.uk",
-    "description":"Structured GCSE and A-Level tutoring. Currently enrolling for GCSE Maths. Register interest for other subjects.",
+    "telephone":"+443333357394",
+    "description":"Structured GCSE tuition. Currently enrolling for GCSE Maths (Foundation & Higher). Register interest for other subjects.",
     "areaServed":[
       {"@type":"City","name":"Slough"},
       {"@type":"AdministrativeArea","name":"Berkshire"},
@@ -32,6 +46,48 @@
     ],
     "sameAs":[
       "https://github.com/SJ778778/edifyacademy.co.uk"
+    ]
+  }
+  </script>
+
+  <!-- FAQ schema (helps SEO; matches the FAQ content below) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do you decide Foundation vs Higher?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"We use a short diagnostic and in-lesson questioning to identify gaps and confidence. Some students can aim for Higher but lose marks on Foundation skills, so we fix the basics quickly and move up."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"My child is far behind. Can you still help?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We prioritise high-impact topics first (the ones that unlock the most marks), build confidence through structured practice, and track progress so lesson time isn’t wasted."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What happens in a trial session?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"We assess current level, teach a short topic to show our approach, and explain the best next steps (1-to-1, small class, or Study Buddy)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you set homework and revision tasks?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Homework matches what was taught so students practise the correct method. We prioritise exam-style questions rather than endless worksheets."
+        }
+      }
     ]
   }
   </script>
@@ -313,6 +369,54 @@
     .step strong{display:block; color:var(--brand-3)}
     .step span{display:block; color:var(--muted); font-size:14px; margin-top:2px}
 
+    /* Trust / Standards strip */
+    .trustGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){
+      .trustGrid{grid-template-columns:1fr}
+    }
+    .trustItem{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      background:#fff;
+    }
+    .trustItem strong{display:block; color:var(--brand-3); margin-bottom:6px}
+    .trustItem span{display:block; color:var(--muted); font-size:14px}
+
+    /* FAQ styles */
+    .faqGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){
+      .faqGrid{ grid-template-columns:1fr; }
+    }
+    .faqItem{
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:#fff;
+      padding:12px 14px;
+    }
+    .faqItem summary{
+      font-weight:950;
+      color:var(--brand-3);
+      cursor:pointer;
+      list-style:none;
+    }
+    .faqItem summary::-webkit-details-marker{ display:none; }
+    .faqItem p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
     .req{color:var(--danger); margin-left:4px}
     .formRow{display:grid; gap:8px}
     label{font-weight:950}
@@ -587,7 +691,7 @@
     <div class="heroWrap">
       <div class="container hero">
         <div class="card">
-          <div class="kicker">Tuition that builds confidence</div>
+          <div class="kicker">GCSE Maths Tuition in Slough & Berkshire</div>
 
           <h1 class="h1">GCSE Maths tuition with a clear plan — and measurable progress.</h1>
 
@@ -596,7 +700,7 @@
           </p>
 
           <p class="muted">
-            <strong>Currently enrolling:</strong> GCSE Maths (Foundation & Higher). We list other subjects so you can register interest — but we are not currently enrolling for them.
+            <strong>Currently enrolling:</strong> GCSE Maths (Foundation & Higher). Other subjects are visible so you can register interest — but we are not currently enrolling for them.
           </p>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
@@ -606,14 +710,19 @@
           </div>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-            <span class="badge">✅ GCSE</span>
+            <span class="badge">✅ Foundation & Higher</span>
             <span class="badge">✅ 1-to-1 • Small classes • Study Buddy</span>
             <span class="badge">✅ Slough • Langley • Windsor • Maidenhead</span>
           </div>
 
-          <p class="muted" style="margin-top:14px">
-            Parents choose Edify when they want structure, consistency, and honest feedback — not random worksheets and vague “tips”.
-          </p>
+          <!-- Results framing (no fake claims) -->
+          <div class="card" style="box-shadow:none; margin-top:14px; border-style:dashed">
+            <div class="kicker" style="margin-bottom:6px">What “progress” means here</div>
+            <p class="muted" style="margin:0">
+              We don’t promise magic results. We promise a structured process: baseline check → targeted teaching → exam-style practice → checkpoints → clear next steps.
+              Parents and students know exactly what to focus on and why.
+            </p>
+          </div>
         </div>
 
         <div class="heroImg" aria-label="Students studying">
@@ -626,7 +735,7 @@
       </div>
     </div>
 
-    <!-- Formats -->
+    <!-- Simple home formats -->
     <div class="section homeOnly" style="padding-top:24px;">
       <div class="container">
         <div class="grid offerGrid">
@@ -661,14 +770,14 @@
                 <div class="stepNum">1</div>
                 <div>
                   <strong>Assess</strong>
-                  <span>Quick diagnostic to identify gaps and confidence level (Foundation vs Higher).</span>
+                  <span>Quick diagnostic to identify gaps and confirm Foundation vs Higher direction.</span>
                 </div>
               </div>
               <div class="step">
                 <div class="stepNum">2</div>
                 <div>
                   <strong>Plan</strong>
-                  <span>We map a topic pathway so lessons build logically (not random).</span>
+                  <span>We map a pathway so lessons build logically (not random worksheets).</span>
                 </div>
               </div>
               <div class="step">
@@ -682,14 +791,14 @@
                 <div class="stepNum">4</div>
                 <div>
                   <strong>Practice</strong>
-                  <span>Exam-style questions (the exact wording students get in papers).</span>
+                  <span>Exam-style questions with mark-scheme thinking (how to earn marks).</span>
                 </div>
               </div>
               <div class="step">
                 <div class="stepNum">5</div>
                 <div>
                   <strong>Track</strong>
-                  <span>Regular checkpoints so we can adjust focus and avoid wasted time.</span>
+                  <span>Regular checkpoints so we adjust focus and avoid wasted time.</span>
                 </div>
               </div>
             </div>
@@ -707,6 +816,94 @@
               loading="lazy"
               style="width:100%; height:100%; object-fit:cover; min-height: 380px;"
             />
+          </div>
+        </div>
+
+        <!-- Ofsted-style trust/standards (no false “Ofsted rated” claims) -->
+        <div class="card" style="margin-top:18px;">
+          <div class="kicker">Standards & safeguarding</div>
+          <h2 class="h2">Run professionally. Clear expectations. Child-first.</h2>
+          <p class="muted" style="margin-top:6px">
+            We operate with school-level professionalism: clear behaviour expectations, structured lessons, and safeguarding at the centre of what we do.
+          </p>
+
+          <div class="trustGrid" aria-label="Standards list">
+            <div class="trustItem">
+              <strong>Safeguarding-first culture</strong>
+              <span>Clear safeguarding contact and policy. Professional boundaries and reporting expectations are non-negotiable.</span>
+            </div>
+            <div class="trustItem">
+              <strong>Tutor quality controls</strong>
+              <span>We require identity checks, references, and appropriate DBS checks before tutors teach. We also standardise lesson delivery.</span>
+            </div>
+            <div class="trustItem">
+              <strong>Measurable progress routines</strong>
+              <span>Baseline check, topic pathway, exam practice, and checkpoints. Students leave each lesson knowing what to do next.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ (added to the ORIGINAL code, as requested) -->
+        <div class="card" style="margin-top:18px;">
+          <div class="kicker">FAQs</div>
+          <h2 class="h2">Questions parents usually ask.</h2>
+          <p class="muted" style="margin-top:6px">
+            If you’re comparing centres, this is the part that matters: what actually happens week to week, and how we handle different ability levels.
+          </p>
+
+          <div class="faqGrid" aria-label="Frequently asked questions">
+            <details class="faqItem" open>
+              <summary>How do you decide Foundation vs Higher?</summary>
+              <p>
+                We use a short diagnostic and in-lesson questioning to see where marks are being lost.
+                Some students are working at Higher but have Foundation gaps — we fix the basics fast, then move up.
+              </p>
+            </details>
+
+            <details class="faqItem">
+              <summary>My child is far behind. Can you still help?</summary>
+              <p>
+                Yes — but we don’t pretend it’s magic. We prioritise the highest-impact topics first (the ones that unlock the most marks),
+                build confidence through structured practice, and track progress so time isn’t wasted.
+              </p>
+            </details>
+
+            <details class="faqItem">
+              <summary>Do you set homework and revision tasks?</summary>
+              <p>
+                Yes. Homework matches what was taught in the lesson so students don’t practise the wrong method.
+                We focus on exam-style questions rather than endless worksheets.
+              </p>
+            </details>
+
+            <details class="faqItem">
+              <summary>What happens in a trial session?</summary>
+              <p>
+                We assess current level, teach a short topic to show our approach, then explain the best next steps
+                (1-to-1, small class, or Study Buddy). If we’re not the right fit, we’ll say so.
+              </p>
+            </details>
+
+            <details class="faqItem">
+              <summary>How do small classes work — will my child get attention?</summary>
+              <p>
+                We keep groups focused and structured. Teaching is clear and short, then students practise while the tutor checks method and fixes mistakes.
+                If a student needs 1-to-1 support, we’ll recommend it.
+              </p>
+            </details>
+
+            <details class="faqItem">
+              <summary>Which exam board do you teach?</summary>
+              <p>
+                We teach GCSE Maths in an exam-board-aware way. The core maths is the same, and we use exam-style questions
+                aligned to common board formats (including Edexcel-style, AQA-style, and OCR-style).
+              </p>
+            </details>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="btn accent big" href="#trial">Book trial</a>
+            <a class="btn primary big" href="tel:+443333357394">Call now</a>
           </div>
         </div>
 
@@ -732,8 +929,6 @@
 
           <!-- GCSE GRID -->
           <div class="courseGrid" id="gcseGrid">
-
-            <!-- GCSE Mathematics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -790,7 +985,6 @@
               </div>
             </article>
 
-            <!-- GCSE English Language -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -837,7 +1031,6 @@
               </div>
             </article>
 
-            <!-- GCSE English Literature -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -884,7 +1077,6 @@
               </div>
             </article>
 
-            <!-- GCSE Biology -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -894,10 +1086,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Cells & organisation</summary>
                   <ul class="topicList">
@@ -931,7 +1119,6 @@
               </div>
             </article>
 
-            <!-- GCSE Chemistry -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -941,10 +1128,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Atomic structure & bonding</summary>
                   <ul class="topicList">
@@ -978,7 +1161,6 @@
               </div>
             </article>
 
-            <!-- GCSE Physics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -988,10 +1170,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Energy & forces</summary>
                   <ul class="topicList">
@@ -1024,13 +1202,10 @@
                 </details>
               </div>
             </article>
-
           </div>
 
           <!-- A-LEVEL GRID -->
           <div class="courseGrid" id="alevelGrid" style="display:none;">
-
-            <!-- A-Level Mathematics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -1040,10 +1215,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Pure Mathematics</summary>
                   <ul class="topicList">
@@ -1077,7 +1248,6 @@
               </div>
             </article>
 
-            <!-- A-Level Biology -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -1087,10 +1257,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Biological molecules & cells</summary>
                   <ul class="topicList">
@@ -1114,7 +1280,6 @@
               </div>
             </article>
 
-            <!-- A-Level Chemistry -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -1124,10 +1289,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Physical chemistry</summary>
                   <ul class="topicList">
@@ -1151,7 +1312,6 @@
               </div>
             </article>
 
-            <!-- A-Level Physics -->
             <article class="courseCard">
               <div class="courseHead">
                 <div class="left">
@@ -1161,10 +1321,6 @@
                 <span class="pill notEnrolling">Not currently enrolling</span>
               </div>
               <div class="courseBody">
-                <p class="muted" style="margin:0 0 10px;">
-                  Not currently enrolling for this subject. Register interest via the enquiry form and we’ll contact you when places open.
-                </p>
-
                 <details open>
                   <summary>Mechanics & materials</summary>
                   <ul class="topicList">
@@ -1187,7 +1343,6 @@
                 </details>
               </div>
             </article>
-
           </div>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px">
@@ -1231,9 +1386,10 @@
           </div>
 
           <div class="card" style="box-shadow:none; margin-top:14px; border-style:dashed">
-            <div class="kicker" style="margin-bottom:6px">What parents get</div>
+            <div class="kicker" style="margin-bottom:6px">Why this works</div>
             <p class="muted" style="margin:0">
-              Clear structure, exam-style practice, and feedback that shows what’s improving and what to focus on next.
+              Students don’t improve from “more hours” alone — they improve when practice is targeted and feedback is precise.
+              We build method, then exam technique, then speed and accuracy.
             </p>
           </div>
         </div>
@@ -1261,8 +1417,7 @@
                 You’ll teach motivated students, follow a structured approach, and you’ll be supported with resources and guidance.
               </p>
               <p class="muted">
-                We respect your time, keep things organised, and we care about quality. If you’re the type of tutor who wants to do a great job,
-                you’ll fit in well here.
+                We respect your time, keep things organised, and we care about quality.
               </p>
             </div>
 
