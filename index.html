@@ -5,45 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support</title>
     <meta name="title" content="Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support">
     <meta name="description" content="Edify Academy provides expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals. Specialising in GCSE, A-Level, and exam preparation.">
     <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
     <meta name="author" content="Edify Academy">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://edifyacademy.co.uk/">
     <meta property="og:title" content="Edify Academy - Expert Tutoring Services | Online & In-Person Tuition">
     <meta property="og:description" content="Expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals.">
     <meta property="og:image" content="https://edifyacademy.co.uk/images/og-image.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://edifyacademy.co.uk/">
     <meta property="twitter:title" content="Edify Academy - Expert Tutoring Services">
     <meta property="twitter:description" content="Expert tutoring services for students. From online tuition to our new in-person tutoring centre.">
     <meta property="twitter:image" content="https://edifyacademy.co.uk/images/twitter-card.jpg">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://edifyacademy.co.uk/">
-    
-    <!-- Favicon (use ONE consistent location) -->
-    <!-- If your favicon is in /favicon.png keep this: -->
-    <link rel="icon" type="png" href="favicon.png">
+
+    <!-- Favicon (correct MIME + consistent path) -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <!-- If your favicon is at the ROOT instead, swap to:
-    <link rel="icon" type="png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    -->
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -63,10 +59,11 @@
     }
     </script>
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
@@ -76,6 +73,7 @@
                         <img src="logo.png" alt="Edify Academy Logo" width="500" height="175">
                     </a>
                 </div>
+
                 <nav class="main-nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -84,6 +82,7 @@
                         <li><a href="index.html#contact" class="nav-link btn-contact">Contact</a></li>
                     </ul>
                 </nav>
+
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -95,7 +94,7 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-        
+
         <!-- Hero Section -->
         <div class="hero">
             <div class="hero-background">
@@ -252,7 +251,7 @@
                         </div>
                     </div>
 
-                    <!-- ✅ ONE form only (Formspree backend) -->
+                    <!-- ✅ SINGLE FORM: Formspree posts directly (no mailto) -->
                     <form
                         class="contact-form"
                         id="contactForm"
@@ -260,13 +259,9 @@
                         method="POST"
                         novalidate
                     >
-                        <!-- Optional Formspree helpers -->
                         <input type="hidden" name="_subject" value="New enquiry from EdifyAcademy.co.uk">
-                        <!-- If you have a thank-you page, uncomment:
-                        <input type="hidden" name="_redirect" value="https://edifyacademy.co.uk/thanks.html">
-                        -->
 
-                        <!-- Error summary (shows at top if missing fields) -->
+                        <!-- Error summary -->
                         <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
 
                         <div class="form-group">
@@ -355,7 +350,7 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
 
-    <!-- ✅ Minimal validation helper (won’t create a 2nd form) -->
+    <!-- ✅ Minimal validation (does NOT block Formspree unless missing fields) -->
     <script>
       (function () {
         const form = document.getElementById("contactForm");
@@ -370,12 +365,22 @@
             .filter(el => !String(el.value || "").trim())
             .map(el => {
               const label = form.querySelector(`label[for="${el.id}"]`);
-              return label ? label.textContent.replace("*", "").trim() : el.name;
+              return label ? label.textContent.replace("*", "").trim() : (el.name || "a required field");
             });
+
+          // basic email format check
+          const emailEl = form.querySelector('input[type="email"]');
+          if (emailEl && String(emailEl.value || "").trim()) {
+            const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim());
+            if (!ok) missing.push("Email (enter a valid email address)");
+          }
 
           if (missing.length) {
             e.preventDefault();
-            errorBox.textContent = "Please fill in: " + missing.join(", ");
+            errorBox.innerHTML =
+              "<strong>Please complete the following:</strong><ul style='margin-top:8px;padding-left:20px;'>" +
+              missing.map(x => `<li>${x}</li>`).join("") +
+              "</ul>";
             errorBox.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         });
