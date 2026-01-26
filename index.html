@@ -11,34 +11,39 @@
     <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
     <meta name="author" content="Edify Academy">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://edifyacademy.co.uk/">
     <meta property="og:title" content="Edify Academy - Expert Tutoring Services | Online & In-Person Tuition">
     <meta property="og:description" content="Expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals.">
     <meta property="og:image" content="https://edifyacademy.co.uk/images/og-image.jpg">
-
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://edifyacademy.co.uk/">
     <meta property="twitter:title" content="Edify Academy - Expert Tutoring Services">
     <meta property="twitter:description" content="Expert tutoring services for students. From online tuition to our new in-person tutoring centre.">
     <meta property="twitter:image" content="https://edifyacademy.co.uk/images/twitter-card.jpg">
-
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://edifyacademy.co.uk/">
-
-    <!-- Favicon -->
+    
+    <!-- Favicon (use ONE consistent location) -->
+    <!-- If your favicon is in /images/favicon.png keep this: -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- If your favicon is at the ROOT instead, swap to:
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    -->
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -46,7 +51,7 @@
       "@type": "EducationalOrganization",
       "name": "Edify Academy",
       "url": "https://edifyacademy.co.uk",
-      "logo": "https://edifyacademy.co.uk/logo.png",
+      "logo": "https://edifyacademy.co.uk/images/logo.png",
       "email": "admissions@edifyacademy.co.uk",
       "telephone": "+443333357394",
       "description": "Expert tutoring services providing online and in-person tuition for GCSE, A-Level, and exam preparation.",
@@ -61,14 +66,14 @@
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
+    
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="index.html" aria-label="Edify Academy Home">
-                        <img src="logo.png" alt="Edify Academy Logo" width="500" height="175">
+                        <img src="images/logo.png" alt="Edify Academy Logo" width="500" height="175">
                     </a>
                 </div>
                 <nav class="main-nav" role="navigation" aria-label="Main navigation">
@@ -90,7 +95,7 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-
+        
         <!-- Hero Section -->
         <div class="hero">
             <div class="hero-background">
@@ -196,7 +201,7 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <p class="testimonial-text">"The online tutoring sessions were incredibly flexible and the tutors were always patient and understanding. My son actually looks forward to his sessions now, which is amazing. Highly recommend!" </p>
+                            <p class="testimonial-text">"The online tutoring sessions were incredibly flexible and the tutors were always patient and understanding. My son actually looks forward to his sessions now, which is amazing. Highly recommend!"</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-info">
@@ -227,6 +232,7 @@
                     <h1 class="page-title">Get In Touch</h1>
                     <p class="page-description">Have questions? We'd love to hear from you. Book a free trial - an initial taster session to see how we can help. Send us a message and we'll respond as soon as possible.</p>
                 </div>
+
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-item">
@@ -246,34 +252,36 @@
                         </div>
                     </div>
 
-                    <!-- ✅ FORM: Formspree backend wired in (front-end classes unchanged) -->
+                    <!-- ✅ ONE form only (Formspree backend) -->
                     <form
                         class="contact-form"
                         id="contactForm"
-                        action="https://formspree.io/f/meeolzra"
+                        action="https://formspree.io/f/YOUR_FORM_ID"
                         method="POST"
                         novalidate
                     >
-                        <!-- Formspree helpers -->
-                        <input type="hidden" name="_subject" value="New enquiry — Edify Academy website">
-                        <!-- Change thank-you.html if you have one. If not, you can delete this line -->
-                        <input type="hidden" name="_redirect" value="https://edifyacademy.co.uk/thank-you.html">
-                        <!-- Honeypot (spam trap) -->
-                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">
+                        <!-- Optional Formspree helpers -->
+                        <input type="hidden" name="_subject" value="New enquiry from EdifyAcademy.co.uk">
+                        <!-- If you have a thank-you page, uncomment:
+                        <input type="hidden" name="_redirect" value="https://edifyacademy.co.uk/thanks.html">
+                        -->
+
+                        <!-- Error summary (shows at top if missing fields) -->
+                        <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
 
                         <div class="form-group">
                             <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required autocomplete="name">
+                            <input type="text" id="name" name="name" autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
+                            <input type="email" id="email" name="email" autocomplete="email" required>
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
                         </div>
 
                         <div class="form-group">
@@ -292,7 +300,6 @@
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
 
-                        <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
@@ -347,103 +354,32 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-</body>
-</html>
-                        method="POST"
-                        novalidate
-                    >
-                        <!-- Formspree helpers -->
-                        <input type="hidden" name="_subject" value="New enquiry — Edify Academy website">
-                        <!-- Change thank-you.html if you have one. If not, you can delete this line -->
-                        <input type="hidden" name="_redirect" value="https://edifyacademy.co.uk/thank-you.html">
-                        <!-- Honeypot (spam trap) -->
-                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">
 
-                        <div class="form-group">
-                            <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required autocomplete="name">
-                        </div>
+    <!-- ✅ Minimal validation helper (won’t create a 2nd form) -->
+    <script>
+      (function () {
+        const form = document.getElementById("contactForm");
+        const errorBox = document.getElementById("formError");
+        if (!form || !errorBox) return;
 
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
-                        </div>
+        form.addEventListener("submit", function (e) {
+          errorBox.textContent = "";
 
-                        <div class="form-group">
-                            <label for="phone">Phone <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-                        </div>
+          const requiredFields = Array.from(form.querySelectorAll("[required]"));
+          const missing = requiredFields
+            .filter(el => !String(el.value || "").trim())
+            .map(el => {
+              const label = form.querySelector(`label[for="${el.id}"]`);
+              return label ? label.textContent.replace("*", "").trim() : el.name;
+            });
 
-                        <div class="form-group">
-                            <label for="subject">Subject <span class="required">*</span></label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select a subject</option>
-                                <option value="general">General Enquiry</option>
-                                <option value="booking">Book a Session</option>
-                                <option value="courses">Course Information</option>
-                                <option value="vacancies">Job Vacancies</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-
-                        <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Edify Academy</h3>
-                    <p>Empowering students to achieve excellence through expert tutoring and personalised learning support.</p>
-                    <div class="footer-contact">
-                        <p><a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a></p>
-                        <p><a href="tel:+443333357394">0333 335 7394</a></p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html#safeguarding">Safeguarding Policy</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
-                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
-                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
-                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Edify Academy. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+          if (missing.length) {
+            e.preventDefault();
+            errorBox.textContent = "Please fill in: " + missing.join(", ");
+            errorBox.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
