@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://edifyacademy.co.uk/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all important pages
+Allow: /
+Allow: /index.html
+Allow: /#home
+Allow: /#about
+Allow: /#courses
+Allow: /#contact
