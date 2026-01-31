@@ -385,54 +385,27 @@
           }
         });
       })();
-        <style>
-  .wa-float{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 20px;              /* ⬅ bigger padding */
-    border-radius: 999px;
-    background: #25D366;
-    color: #fff;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    font-weight: 800;
-    font-size: 16px;                 /* ⬅ bigger text */
-    text-decoration: none;
-    box-shadow: 0 14px 34px rgba(0,0,0,.25);
-    transition: transform 0.2s ease;
-  }
+        <!-- WhatsApp Floating Button -->
+<a
+  class="wa-float"
+  href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%E2%80%99d%20like%20to%20ask%20about%20tuition."
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Edify Academy on WhatsApp"
+>
+  <span class="wa-icon" aria-hidden="true">
+    <!-- WhatsApp icon (SVG) -->
+    <svg viewBox="0 0 32 32" width="28" height="28" focusable="false" aria-hidden="true">
+      <path fill="currentColor" d="M19.11 17.53c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.17.26-.67.85-.82 1.03-.15.17-.3.2-.56.07-.26-.13-1.1-.4-2.09-1.28-.77-.69-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.46.07-.69.33-.24.26-.91.89-.91 2.18s.93 2.53 1.06 2.71c.13.17 1.83 2.79 4.43 3.91.62.27 1.11.43 1.49.55.62.2 1.18.17 1.62.1.49-.07 1.54-.63 1.75-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/>
+      <path fill="currentColor" d="M16.02 5.33c-5.9 0-10.7 4.8-10.7 10.7 0 1.87.49 3.7 1.43 5.32L5.2 26.67l5.48-1.44a10.63 10.63 0 0 0 5.34 1.45c5.9 0 10.7-4.8 10.7-10.7s-4.8-10.65-10.7-10.65zm0 19.52c-1.7 0-3.37-.46-4.82-1.34l-.35-.2-3.25.85.87-3.17-.22-.37a8.82 8.82 0 0 1-1.37-4.68c0-4.9 3.99-8.88 8.9-8.88 4.9 0 8.88 3.99 8.88 8.9s-3.99 8.89-8.9 8.89z"/>
+    </svg>
+  </span>
+  <span class="wa-text">
+    <strong>WhatsApp us</strong>
+    <small>Typically replies fast</small>
+  </span>
+</a>
 
-  .wa-float:hover{
-    transform: scale(1.05);
-  }
-
-  .wa-float svg{
-    width: 34px;                     /* ⬅ bigger icon */
-    height: 34px;
-    fill: #fff;
-    display: block;
-  }
-
-  .wa-text{
-    font-size: 16px;
-    line-height: 1;
-  }
-
-  @media (max-width: 520px){
-    .wa-text{ display:none; }
-    .wa-float{
-      padding: 16px;                /* still big on mobile */
-    }
-    .wa-float svg{
-      width: 36px;
-      height: 36px;
-    }
-  }
-</style>
 
 </body>
 </html>
