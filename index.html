@@ -386,5 +386,46 @@
         });
       })();
     </script>
+    <!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%20%E2%80%94%20I%27d%20like%20to%20ask%20about%20tuition."
+  class="wa-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with us on WhatsApp"
+>
+  <!-- WhatsApp icon (SVG) -->
+  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path d="M19.11 17.53c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.33.21-.62.07-.29-.14-1.21-.45-2.31-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.12-.59.12-.12.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.62.69.22 1.31.19 1.8.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"/>
+    <path d="M26.7 5.3C24.03 2.63 20.48 1.16 16.7 1.16 8.93 1.16 2.61 7.48 2.61 15.25c0 2.49.65 4.92 1.89 7.06L2.5 30.84l8.72-2.29c2.08 1.13 4.41 1.73 6.78 1.73h.01c7.77 0 14.09-6.32 14.09-14.09 0-3.77-1.47-7.32-4.14-9.89zm-9.99 22.6h-.01c-2.11 0-4.18-.57-5.98-1.64l-.43-.25-5.17 1.36 1.38-5.04-.28-.52c-1.17-1.86-1.79-4.01-1.79-6.2C4.43 8.62 9.93 3.12 16.71 3.12c3.29 0 6.39 1.28 8.72 3.61a12.24 12.24 0 0 1 3.61 8.71c0 6.78-5.5 12.28-12.33 12.46z"/>
+  </svg>
+  <span class="wa-text">WhatsApp</span>
+</a>
+
+<style>
+  .wa-float{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 14px;
+    border-radius:999px;
+    background:#25D366;
+    color:#fff;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+  }
+  .wa-float svg{ width:26px; height:26px; fill:#fff; display:block; }
+  .wa-text{ font-size:14px; line-height:1; }
+  @media (max-width:520px){
+    .wa-text{ display:none; } /* icon only on small screens */
+    .wa-float{ padding:12px; }
+  }
+</style>
 </body>
 </html>
