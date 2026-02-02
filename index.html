@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support</title>
     <meta name="title" content="Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support">
-    <meta name="description" content="Edify Academy provides expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals. Specialising in GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation.">
-    <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, GCSE Maths, GCSE Physics, GCSE Chemistry, GCSE Biology, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
+    <meta name="description" content="Edify Academy provides expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals. Specialising in GCSE, A-Level, and exam preparation.">
+    <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
     <meta name="author" content="Edify Academy">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -49,7 +50,7 @@
       "logo": "https://edifyacademy.co.uk/logo.png",
       "email": "admissions@edifyacademy.co.uk",
       "telephone": "+443333357394",
-      "description": "Expert tutoring services providing online and in-person tuition for GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation.",
+      "description": "Expert tutoring services providing online and in-person tuition for GCSE, A-Level, and exam preparation.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GB",
@@ -58,55 +59,54 @@
     }
     </script>
 
-    <!-- WhatsApp Button Styling (bigger + mobile-safe) -->
+    <!-- WhatsApp floating button styling (bigger + mobile safe) -->
     <style>
-      .wa-float{
+      .whatsapp-float{
         position: fixed;
         right: 18px;
         bottom: 18px;
         z-index: 9999;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 14px 16px;
+        width: 68px;
+        height: 68px;
         border-radius: 999px;
-        background: #25D366;
-        color: #fff;
-        text-decoration: none;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        font-weight: 700;
-        box-shadow: 0 14px 30px rgba(0,0,0,.18);
-        border: 1px solid rgba(0,0,0,.08);
-      }
-      .wa-float:hover{ filter: brightness(1.03); transform: translateY(-1px); }
-      .wa-float:active{ transform: translateY(0); }
-      .wa-float__icon{
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        background: rgba(255,255,255,.16);
         display: grid;
         place-items: center;
-        flex: 0 0 44px;
+        background: #25D366;
+        box-shadow: 0 14px 40px rgba(0,0,0,.22);
+        border: 2px solid rgba(255,255,255,.65);
+        text-decoration: none;
       }
-      .wa-float__text{
-        display: flex;
-        flex-direction: column;
-        line-height: 1.1;
+      .whatsapp-float svg{
+        width: 34px;
+        height: 34px;
+        display: block;
       }
-      .wa-float__text small{
-        font-weight: 600;
-        opacity: .92;
-      }
+      .whatsapp-float:active{ transform: scale(0.98); }
 
-      /* Make it even bigger on mobile + safe-area padding */
-      @media (max-width: 600px){
-        .wa-float{
+      /* Optional small label (desktop) */
+      .whatsapp-label{
+        position: fixed;
+        right: 98px;
+        bottom: 30px;
+        z-index: 9999;
+        background: #ffffff;
+        color: #0b1220;
+        border: 1px solid rgba(0,0,0,.08);
+        box-shadow: 0 10px 28px rgba(0,0,0,.10);
+        padding: 10px 12px;
+        border-radius: 999px;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      @media (max-width: 680px){
+        .whatsapp-float{
+          width: 72px;
+          height: 72px;
           right: 14px;
-          bottom: calc(14px + env(safe-area-inset-bottom));
-          padding: 16px 18px;
+          bottom: 14px;
         }
-        .wa-float__icon{ width: 48px; height: 48px; flex-basis: 48px; }
+        .whatsapp-label{ display:none; }
       }
     </style>
 </head>
@@ -153,16 +153,13 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Empowering Students to Achieve Excellence</h1>
-                    <p class="hero-subtitle">
-                        From online tuition to our new in-person tutoring centre, we provide expert support to help students reach their full potential.
-                        Support includes GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation. Start with a free trial - an initial taster to see how we can help.
-                    </p>
+                    <p class="hero-subtitle">From online tuition to our new in-person tutoring centre, we provide expert support to help students reach their full potential. Start with a free trial - an initial taster to see how we can help.</p>
                     <div class="hero-buttons">
                         <a href="about.html" class="btn btn-primary">Learn More</a>
                         <a href="#contact" class="btn btn-secondary">Book Free Trial</a>
                     </div>
                     <p class="hero-subtitle" style="margin-top: 20px; font-size: 1rem; color: rgba(255, 255, 255, 0.9);">
-                        <strong>Free Trial Available:</strong> Start with an initial taster session to see how we can help your child succeed.
+                        <strong>Currently Enrolling:</strong> GCSE Maths, Physics, Chemistry & Biology (plus Primary School Tuition). Other subjects available for interest registration.
                     </p>
                 </div>
             </div>
@@ -173,10 +170,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Why Choose Edify Academy?</h2>
-                    <p class="section-description">
-                        We've evolved from helping schools find supply teachers to providing comprehensive tutoring services for students.
-                        GCSE support includes Maths, Physics, Chemistry and Biology. Start with a free trial - an initial taster to see how we can help.
-                    </p>
+                    <p class="section-description">We've evolved from helping schools find supply teachers to providing comprehensive tutoring services for students. Start with a free trial - an initial taster to see how we can help.</p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
@@ -293,23 +287,25 @@
                             <h3>Email</h3>
                             <p><a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a></p>
                         </div>
-
                         <div class="contact-item">
                             <h3>Phone</h3>
                             <p><a href="tel:+443333357394">0333 335 7394</a></p>
                         </div>
 
-                        <!-- ✅ Added WhatsApp subheading exactly as requested -->
+                        <!-- ✅ Added WhatsApp subheading + number (as requested) -->
                         <div class="contact-item">
-                            <h3>WhatsApp (text us)</h3>
-                            <p><a href="https://wa.me/447943703569" target="_blank" rel="noopener">07943 703569</a></p>
+                            <h3>WhatsApp (Text Us)</h3>
+                            <p>
+                              <a href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%27d%20like%20to%20enquire%20about%20tuition." target="_blank" rel="noopener">
+                                07943 703569
+                              </a>
+                            </p>
                         </div>
 
                         <div class="contact-item">
                             <h3>Address</h3>
                             <p>Edify Academy<br>Slough & Berkshire<br>United Kingdom</p>
                         </div>
-
                         <div class="contact-image">
                             <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=70" alt="Contact us" width="400" height="300">
                         </div>
@@ -361,6 +357,7 @@
 
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+
                 </div>
             </div>
         </section>
@@ -411,55 +408,50 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- Floating WhatsApp button -->
+    <div class="whatsapp-label" aria-hidden="true">WhatsApp us</div>
     <a
-      class="wa-float"
-      href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%27d%20like%20to%20ask%20about%20tutoring."
+      class="whatsapp-float"
+      href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%27d%20like%20to%20enquire%20about%20tuition."
       target="_blank"
       rel="noopener"
       aria-label="Chat with Edify Academy on WhatsApp"
     >
-      <span class="wa-float__icon" aria-hidden="true">
-        <!-- WhatsApp icon -->
-        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.382.7 4.603 1.905 6.467L4 29l7.74-1.84A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Z" fill="white" fill-opacity=".22"/>
-          <path d="M16 5.4c5.3 0 9.6 4.3 9.6 9.6S21.3 24.6 16 24.6c-1.6 0-3.1-.4-4.4-1.1l-.5-.3-4.5 1.1 1.2-4.4-.3-.5A9.53 9.53 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6Z" fill="#fff"/>
-          <path d="M12.7 10.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.6 1 2.8c.1.2 1.8 3 4.4 4.1 2.1.9 2.6.7 3 .6.4-.1 1.3-.5 1.5-1 .2-.5.2-1 .1-1.1-.1-.1-.3-.2-.6-.4l-1.8-.9c-.3-.1-.5-.2-.7.2-.2.4-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.9-.1-.3 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9Z" fill="#25D366"/>
-        </svg>
-      </span>
-      <span class="wa-float__text">
-        <span>WhatsApp us</span>
-        <small>07943 703569</small>
-      </span>
+      <!-- WhatsApp icon -->
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#fff" d="M19.11 17.27c-.27-.14-1.58-.78-1.82-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.64 1.11 2.82.14.18 1.9 2.9 4.6 4.07.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.58-.64 1.8-1.26.22-.62.22-1.15.16-1.26-.07-.11-.25-.18-.52-.32z"/>
+        <path fill="#fff" d="M16.03 3.2c-7.09 0-12.86 5.61-12.86 12.52 0 2.2.6 4.35 1.74 6.24L3 28.8l7.07-1.87c1.83.97 3.9 1.48 5.96 1.48 7.09 0 12.86-5.61 12.86-12.52S23.12 3.2 16.03 3.2zm0 22.01c-1.9 0-3.78-.54-5.41-1.56l-.39-.24-4.2 1.11 1.12-4.03-.25-.4a10.62 10.62 0 0 1-1.64-5.67c0-5.87 4.93-10.65 11-10.65s11 4.78 11 10.65-4.93 10.65-11 10.65z"/>
+      </svg>
     </a>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
 
-    <!-- ✅ Inline validation: blocks only if missing; otherwise lets Formspree submit normally -->
+    <!-- ✅ Form validation + STOP your current main.js mailto hijack (keeps ONE form) -->
     <script>
       (function () {
         const form = document.getElementById("contactForm");
         const errorBox = document.getElementById("formError");
         if (!form || !errorBox) return;
 
+        // Capture phase so it runs BEFORE main.js
         form.addEventListener("submit", function (e) {
-          errorBox.textContent = "";
           errorBox.style.display = "none";
+          errorBox.innerHTML = "";
 
           const requiredFields = Array.from(form.querySelectorAll("[required]"));
           const missing = requiredFields
             .filter(el => !String(el.value || "").trim())
             .map(el => {
-              const label = form.querySelector(`label[for="${el.id}"]`);
-              return label ? label.textContent.replace("*", "").trim() : el.name;
+              const label = form.querySelector('label[for="' + el.id + '"]');
+              return label ? label.textContent.replace("*", "").trim() : (el.name || "Field");
             });
 
-          // basic email format check (only if user typed something)
-          const email = form.querySelector('input[type="email"]');
-          if (email && email.value.trim()) {
+          // Validate email format if present
+          const emailEl = form.querySelector('input[type="email"]');
+          if (emailEl && String(emailEl.value || "").trim()) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value.trim())) {
+            if (!emailRegex.test(emailEl.value.trim())) {
               missing.push("Email (enter a valid email address)");
             }
           }
@@ -469,13 +461,18 @@
             errorBox.style.display = "block";
             errorBox.innerHTML =
               "<strong>Please complete the following required fields:</strong>" +
-              "<ul style=\"margin-top:8px; padding-left:20px;\">" +
-              missing.map(x => "<li>" + x + "</li>").join("") +
+              "<ul style='margin-top:8px; padding-left:20px;'>" +
+              missing.map(f => "<li>" + f + "</li>").join("") +
               "</ul>";
             errorBox.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
           }
-          // If valid: DO NOT preventDefault → Formspree submits normally.
-        });
+
+          // ✅ This is the key fix:
+          // Prevent the existing main.js submit handler from hijacking into mailto/outlook.
+          // We do NOT preventDefault here, so Formspree submits normally.
+          e.stopImmediatePropagation();
+        }, true);
       })();
     </script>
 </body>
