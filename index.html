@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support</title>
     <meta name="title" content="Edify Academy - Expert Tutoring Services | Online & In-Person Tuition | GCSE & A-Level Support">
-    <meta name="description" content="Edify Academy provides expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals. Specialising in GCSE, A-Level, and exam preparation.">
-    <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
+    <meta name="description" content="Edify Academy provides expert tutoring services for students. From online tuition to our new in-person tutoring centre, we help students achieve their academic goals. Specialising in GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation.">
+    <meta name="keywords" content="tutoring, tuition, online tutoring, in-person tutoring, GCSE tutoring, GCSE Maths, GCSE Physics, GCSE Chemistry, GCSE Biology, A-Level tutoring, exam preparation, private tutor, tutoring centre, Edify Academy, supply teachers, educational support">
     <meta name="author" content="Edify Academy">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -29,7 +29,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://edifyacademy.co.uk/">
 
-    <!-- Favicon (correct MIME type) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
@@ -49,7 +49,7 @@
       "logo": "https://edifyacademy.co.uk/logo.png",
       "email": "admissions@edifyacademy.co.uk",
       "telephone": "+443333357394",
-      "description": "Expert tutoring services providing online and in-person tuition for GCSE, A-Level, and exam preparation.",
+      "description": "Expert tutoring services providing online and in-person tuition for GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GB",
@@ -58,7 +58,7 @@
     }
     </script>
 
-    <!-- WhatsApp button styling (bigger + mobile-safe) -->
+    <!-- WhatsApp Button Styling (bigger + mobile-safe) -->
     <style>
       .wa-float{
         position: fixed;
@@ -67,80 +67,50 @@
         z-index: 9999;
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        width: 72px;
-        height: 72px;
+        gap: 10px;
+        padding: 14px 16px;
         border-radius: 999px;
-        text-decoration: none;
-        box-shadow: 0 14px 34px rgba(0,0,0,.25);
-        transform: translateZ(0);
-      }
-      .wa-float:focus{
-        outline: 3px solid rgba(59,130,246,.55);
-        outline-offset: 4px;
-      }
-      .wa-float .wa-pill{
-        position:absolute;
-        right: 82px;
-        bottom: 14px;
-        background: #ffffff;
-        color: #111827;
-        border-radius: 999px;
-        padding: 10px 12px;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-        font-weight: 700;
-        font-size: 14px;
-        box-shadow: 0 12px 26px rgba(0,0,0,.18);
-        white-space: nowrap;
-        border: 1px solid rgba(17,24,39,.10);
-      }
-      .wa-float .wa-pill span{
-        display:block;
-        font-weight: 600;
-        font-size: 12px;
-        opacity:.75;
-        margin-top: 2px;
-      }
-      .wa-float .wa-icon{
-        width: 72px;
-        height: 72px;
-        border-radius: 999px;
-        display:grid;
-        place-items:center;
         background: #25D366;
+        color: #fff;
+        text-decoration: none;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-weight: 700;
+        box-shadow: 0 14px 30px rgba(0,0,0,.18);
+        border: 1px solid rgba(0,0,0,.08);
       }
-      .wa-float svg{
-        width: 34px;
-        height: 34px;
+      .wa-float:hover{ filter: brightness(1.03); transform: translateY(-1px); }
+      .wa-float:active{ transform: translateY(0); }
+      .wa-float__icon{
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: rgba(255,255,255,.16);
+        display: grid;
+        place-items: center;
+        flex: 0 0 44px;
+      }
+      .wa-float__text{
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+      .wa-float__text small{
+        font-weight: 600;
+        opacity: .92;
       }
 
-      /* Mobile: keep it big and away from iOS bottom bar */
-      @media (max-width: 520px){
+      /* Make it even bigger on mobile + safe-area padding */
+      @media (max-width: 600px){
         .wa-float{
-          width: 78px;
-          height: 78px;
           right: 14px;
-          bottom: 20px;
+          bottom: calc(14px + env(safe-area-inset-bottom));
+          padding: 16px 18px;
         }
-        .wa-float .wa-icon{
-          width: 78px;
-          height: 78px;
-        }
-        .wa-float svg{
-          width: 36px;
-          height: 36px;
-        }
-        .wa-float .wa-pill{
-          display:none; /* optional: hide pill on small screens */
-        }
-      }
-
-      /* If user has reduced-motion */
-      @media (prefers-reduced-motion: reduce){
-        .wa-float{ transition:none !important; }
+        .wa-float__icon{ width: 48px; height: 48px; flex-basis: 48px; }
       }
     </style>
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -183,7 +153,10 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Empowering Students to Achieve Excellence</h1>
-                    <p class="hero-subtitle">From online tuition to our new in-person tutoring centre, we provide expert support to help students reach their full potential. Start with a free trial - an initial taster to see how we can help.</p>
+                    <p class="hero-subtitle">
+                        From online tuition to our new in-person tutoring centre, we provide expert support to help students reach their full potential.
+                        Support includes GCSE Maths, Physics, Chemistry and Biology, plus A-Level and exam preparation. Start with a free trial - an initial taster to see how we can help.
+                    </p>
                     <div class="hero-buttons">
                         <a href="about.html" class="btn btn-primary">Learn More</a>
                         <a href="#contact" class="btn btn-secondary">Book Free Trial</a>
@@ -200,7 +173,10 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Why Choose Edify Academy?</h2>
-                    <p class="section-description">We've evolved from helping schools find supply teachers to providing comprehensive tutoring services for students. Start with a free trial - an initial taster to see how we can help.</p>
+                    <p class="section-description">
+                        We've evolved from helping schools find supply teachers to providing comprehensive tutoring services for students.
+                        GCSE support includes Maths, Physics, Chemistry and Biology. Start with a free trial - an initial taster to see how we can help.
+                    </p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
@@ -317,14 +293,23 @@
                             <h3>Email</h3>
                             <p><a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a></p>
                         </div>
+
                         <div class="contact-item">
                             <h3>Phone</h3>
                             <p><a href="tel:+443333357394">0333 335 7394</a></p>
                         </div>
+
+                        <!-- ✅ Added WhatsApp subheading exactly as requested -->
+                        <div class="contact-item">
+                            <h3>WhatsApp (text us)</h3>
+                            <p><a href="https://wa.me/447943703569" target="_blank" rel="noopener">07943 703569</a></p>
+                        </div>
+
                         <div class="contact-item">
                             <h3>Address</h3>
                             <p>Edify Academy<br>Slough & Berkshire<br>United Kingdom</p>
                         </div>
+
                         <div class="contact-image">
                             <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=70" alt="Contact us" width="400" height="300">
                         </div>
@@ -339,25 +324,25 @@
                         novalidate
                     >
                         <input type="hidden" name="_subject" value="New enquiry from EdifyAcademy.co.uk">
-                        <!-- optional:
-                        <input type="hidden" name="_redirect" value="https://edifyacademy.co.uk/thanks.html">
-                        -->
 
-                        <!-- Error summary (top) -->
+                        <!-- Error summary -->
                         <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
 
                         <div class="form-group">
                             <label for="name">Name <span class="required">*</span></label>
                             <input type="text" id="name" name="name" autocomplete="name" required>
                         </div>
+
                         <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
                             <input type="email" id="email" name="email" autocomplete="email" required>
                         </div>
+
                         <div class="form-group">
                             <label for="phone">Phone <span class="required">*</span></label>
                             <input type="tel" id="phone" name="phone" autocomplete="tel" required>
                         </div>
+
                         <div class="form-group">
                             <label for="subject">Subject <span class="required">*</span></label>
                             <select id="subject" name="subject" required>
@@ -368,6 +353,7 @@
                                 <option value="vacancies">Job Vacancies</option>
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label for="message">Message <span class="required">*</span></label>
                             <textarea id="message" name="message" rows="6" required></textarea>
@@ -425,116 +411,70 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button (bigger + works on mobile) -->
-    <!-- Phone must be international format (UK): 447943703569 -->
+    <!-- WhatsApp Floating Button -->
     <a
       class="wa-float"
-      href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%20have%20an%20enquiry%20about%20tuition."
+      href="https://wa.me/447943703569?text=Hi%20Edify%20Academy%2C%20I%27d%20like%20to%20ask%20about%20tutoring."
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener"
       aria-label="Chat with Edify Academy on WhatsApp"
     >
-      <div class="wa-pill">WhatsApp us <span>Quick reply</span></div>
-      <div class="wa-icon" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M27.2 4.8C24.4 2 20.3.5 16 .5 7.7.5 1 7.2 1 15.5c0 2.6.7 5.1 2 7.3L1 31.5l8.9-1.9c2.1 1.2 4.6 1.9 7.1 1.9 8.3 0 15-6.7 15-15 0-4.3-1.7-8.4-4.8-11.7Z" fill="#25D366"/>
-          <path d="M16 28.4c-2.3 0-4.6-.6-6.6-1.9l-.5-.3-5.3 1.1 1.1-5.2-.3-.5A12.2 12.2 0 0 1 3.6 15.5C3.6 8.7 9.2 3.1 16 3.1c3.3 0 6.4 1.3 8.8 3.7a12.3 12.3 0 0 1 3.6 8.7c0 6.8-5.6 12.9-12.4 12.9Z" fill="#fff"/>
-          <path d="M23.2 19.3c-.1-.2-.5-.3-.9-.5-.4-.2-2.4-1.2-2.7-1.3-.3-.1-.6-.2-.8.2-.2.3-1 1.3-1.2 1.6-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9Z" fill="#25D366"/>
+      <span class="wa-float__icon" aria-hidden="true">
+        <!-- WhatsApp icon -->
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.382.7 4.603 1.905 6.467L4 29l7.74-1.84A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Z" fill="white" fill-opacity=".22"/>
+          <path d="M16 5.4c5.3 0 9.6 4.3 9.6 9.6S21.3 24.6 16 24.6c-1.6 0-3.1-.4-4.4-1.1l-.5-.3-4.5 1.1 1.2-4.4-.3-.5A9.53 9.53 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6Z" fill="#fff"/>
+          <path d="M12.7 10.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.6 1 2.8c.1.2 1.8 3 4.4 4.1 2.1.9 2.6.7 3 .6.4-.1 1.3-.5 1.5-1 .2-.5.2-1 .1-1.1-.1-.1-.3-.2-.6-.4l-1.8-.9c-.3-.1-.5-.2-.7.2-.2.4-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.9-.1-.3 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9Z" fill="#25D366"/>
         </svg>
-      </div>
+      </span>
+      <span class="wa-float__text">
+        <span>WhatsApp us</span>
+        <small>07943 703569</small>
+      </span>
     </a>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
 
-    <!-- IMPORTANT FIX:
-         Your current main.js forces mailto: on form submit (Outlook).
-         This block removes that handler safely (without changing your main.js file),
-         validates required fields, and submits to Formspree correctly. -->
+    <!-- ✅ Inline validation: blocks only if missing; otherwise lets Formspree submit normally -->
     <script>
       (function () {
-        const oldForm = document.getElementById("contactForm");
+        const form = document.getElementById("contactForm");
         const errorBox = document.getElementById("formError");
-        if (!oldForm) return;
+        if (!form || !errorBox) return;
 
-        // Remove any submit handlers previously attached by main.js by cloning the form node
-        const newForm = oldForm.cloneNode(true);
-        oldForm.parentNode.replaceChild(newForm, oldForm);
+        form.addEventListener("submit", function (e) {
+          errorBox.textContent = "";
+          errorBox.style.display = "none";
 
-        // Re-grab error box after clone
-        const newErrorBox = newForm.querySelector("#formError") || errorBox;
-
-        function fieldLabel(form, el){
-          const label = form.querySelector('label[for="' + el.id + '"]');
-          return label ? label.textContent.replace("*", "").trim() : (el.name || "This field");
-        }
-
-        newForm.addEventListener("submit", async function (e) {
-          if (newErrorBox) newErrorBox.textContent = "";
-
-          const requiredFields = Array.from(newForm.querySelectorAll("[required]"));
+          const requiredFields = Array.from(form.querySelectorAll("[required]"));
           const missing = requiredFields
             .filter(el => !String(el.value || "").trim())
-            .map(el => fieldLabel(newForm, el));
+            .map(el => {
+              const label = form.querySelector(`label[for="${el.id}"]`);
+              return label ? label.textContent.replace("*", "").trim() : el.name;
+            });
 
-          // Basic email format check
-          const emailEl = newForm.querySelector('input[type="email"]');
-          if (emailEl && String(emailEl.value || "").trim()) {
-            const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(emailEl.value).trim());
-            if (!emailOk) missing.push("Email (enter a valid email address)");
+          // basic email format check (only if user typed something)
+          const email = form.querySelector('input[type="email"]');
+          if (email && email.value.trim()) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+              missing.push("Email (enter a valid email address)");
+            }
           }
 
           if (missing.length) {
             e.preventDefault();
-            if (newErrorBox) {
-              newErrorBox.innerHTML =
-                "<strong>Please complete the following required fields:</strong>" +
-                "<ul style='margin-top:8px;padding-left:20px;'>" +
-                missing.map(x => "<li>" + x + "</li>").join("") +
-                "</ul>";
-              newErrorBox.style.display = "block";
-              newErrorBox.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-            return;
+            errorBox.style.display = "block";
+            errorBox.innerHTML =
+              "<strong>Please complete the following required fields:</strong>" +
+              "<ul style=\"margin-top:8px; padding-left:20px;\">" +
+              missing.map(x => "<li>" + x + "</li>").join("") +
+              "</ul>";
+            errorBox.scrollIntoView({ behavior: "smooth", block: "start" });
           }
-
-          // Submit to Formspree via fetch (stays on the same page)
-          e.preventDefault();
-          try {
-            const res = await fetch(newForm.action, {
-              method: "POST",
-              body: new FormData(newForm),
-              headers: { "Accept": "application/json" }
-            });
-
-            if (res.ok) {
-              newForm.reset();
-              if (newErrorBox) {
-                newErrorBox.style.display = "block";
-                newErrorBox.innerHTML = "<strong>Thanks!</strong> Your message has been sent.";
-              } else {
-                alert("Thanks! Your message has been sent.");
-              }
-            } else {
-              const data = await res.json().catch(() => ({}));
-              const msg = data && data.errors ? data.errors.map(e => e.message).join(", ") : "Something went wrong sending your message.";
-              if (newErrorBox) {
-                newErrorBox.style.display = "block";
-                newErrorBox.innerHTML = "<strong>Message not sent:</strong> " + msg;
-                newErrorBox.scrollIntoView({ behavior: "smooth", block: "start" });
-              } else {
-                alert("Message not sent: " + msg);
-              }
-            }
-          } catch (err) {
-            if (newErrorBox) {
-              newErrorBox.style.display = "block";
-              newErrorBox.innerHTML = "<strong>Message not sent:</strong> Please try again, or email admissions@edifyacademy.co.uk";
-              newErrorBox.scrollIntoView({ behavior: "smooth", block: "start" });
-            } else {
-              alert("Message not sent. Please try again or email admissions@edifyacademy.co.uk");
-            }
-          }
+          // If valid: DO NOT preventDefault → Formspree submits normally.
         });
       })();
     </script>
