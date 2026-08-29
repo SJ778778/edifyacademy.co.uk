@@ -98,56 +98,9 @@
 
 })();
 
-// Courses disclosure and community registration are separate from academic enquiries.
+// Community registration is separate from academic enquiries.
 (function () {
   'use strict';
-
-  document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
-    const toggle = dropdown.querySelector('.courses-dropdown-toggle');
-    const submenu = dropdown.querySelector('.courses-submenu');
-    const hoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)');
-    if (!toggle || !submenu) return;
-
-    function setOpen(open) {
-      submenu.hidden = !open;
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Hide course options' : 'Show course options');
-      toggle.title = open ? 'Hide course options' : 'Show course options';
-    }
-
-    setOpen(false);
-    dropdown.classList.add('dropdown-ready');
-    toggle.addEventListener('click', () => setOpen(submenu.hidden));
-    dropdown.querySelector('.nav-link').addEventListener('pointerenter', () => {
-      if (hoverDevice.matches) setOpen(true);
-    });
-    dropdown.addEventListener('pointerleave', () => {
-      if (!dropdown.contains(document.activeElement)) setOpen(false);
-    });
-    dropdown.addEventListener('focusout', event => {
-      if (!dropdown.contains(event.relatedTarget)) setOpen(false);
-    });
-    dropdown.addEventListener('keydown', event => {
-      if (event.target === toggle && (event.key === 'Enter' || event.key === ' ')) {
-        event.preventDefault();
-        setOpen(submenu.hidden);
-      } else if (event.key === 'Escape' && !submenu.hidden) {
-        event.preventDefault();
-        setOpen(false);
-        toggle.focus();
-      } else if (event.key === 'ArrowDown' && !submenu.contains(event.target)) {
-        event.preventDefault();
-        setOpen(true);
-        submenu.querySelector('a').focus();
-      }
-    });
-    document.addEventListener('click', event => {
-      if (!dropdown.contains(event.target)) setOpen(false);
-    });
-    submenu.addEventListener('click', event => {
-      if (event.target.closest('a')) setOpen(false);
-    });
-  });
 
   const form = document.getElementById('communityRegistrationForm');
   if (!form) return;
