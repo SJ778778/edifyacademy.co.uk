@@ -132,6 +132,8 @@ img {
     height: 175px;
     width: auto;
     max-width: 100%;
+    transform: scale(1.2);
+    transform-origin: left center;
 }
 
 .main-nav {
@@ -1259,81 +1261,10 @@ main {
     }
 }
 
-/* Courses dropdown: the Courses link still opens academic tuition. */
-.courses-dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.courses-dropdown > .nav-link {
-    padding-right: var(--spacing-xs);
-}
-
-.courses-dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-    border: 0;
-    border-radius: 6px;
-    background: transparent;
-    color: var(--primary-color);
-    font: 1.5rem var(--font-primary);
-    cursor: pointer;
-}
-
-.courses-dropdown-toggle:hover {
-    background: var(--bg-light);
-}
-
-.courses-dropdown-toggle[aria-expanded="true"] span {
-    transform: rotate(180deg);
-}
-
-.courses-dropdown a:focus-visible,
-.courses-dropdown-toggle:focus-visible,
 .community-page a:focus-visible,
 .community-page button:focus-visible {
     outline: 3px solid var(--primary-light);
     outline-offset: 3px;
-}
-
-.courses-submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 235px;
-    padding: var(--spacing-xs);
-    list-style: none;
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    box-shadow: var(--shadow-lg);
-    z-index: 1001;
-}
-
-.courses-dropdown:not(.dropdown-ready):hover .courses-submenu,
-.courses-dropdown:not(.dropdown-ready):focus-within .courses-submenu,
-.courses-dropdown.dropdown-ready .courses-submenu:not([hidden]) {
-    display: block;
-}
-
-.courses-submenu a {
-    display: block;
-    padding: 12px var(--spacing-sm);
-    border-radius: 4px;
-    color: var(--text-dark);
-    font-weight: 500;
-}
-
-.courses-submenu a:hover,
-.courses-submenu a[aria-current="page"] {
-    color: var(--primary-color);
-    background: var(--bg-light);
 }
 
 /* Community Support only: reuse the site's typography, spacing and form styles. */
@@ -1459,18 +1390,6 @@ main {
 .community-page .contact-form input[aria-invalid="true"] { border-color: #dc2626; }
 
 @media (max-width: 968px) {
-    .courses-dropdown { flex-wrap: wrap; }
-    .courses-dropdown > .nav-link { flex: 1; width: auto; }
-    .courses-submenu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
-
-    /* Keep the expanded menu below the existing logo at every breakpoint. */
-    .header:has(.courses-dropdown) .nav-list {
-        position: absolute;
-        top: 100%;
-        max-height: calc(100dvh - 207px);
-        overflow-y: auto;
-    }
-
     .community-event-layout { grid-template-columns: 1fr; }
     .community-event-photo { max-width: 650px; }
 }
@@ -1478,15 +1397,10 @@ main {
 @media (max-width: 768px) {
     .community-page h1 { font-size: 2.25rem; }
     .community-page h2 { font-size: 1.75rem; }
-    .header:has(.courses-dropdown) .nav-list { max-height: calc(100dvh - 157px); }
     .community-page #community-registration,
     .community-page #digital-confidence { scroll-margin-top: 180px; }
 }
 
 @media (max-width: 480px) {
-    .header:has(.courses-dropdown) .nav-list { max-height: calc(100dvh - 132px); }
     .community-page .contact-form { padding: var(--spacing-md); }
-    .community-page .community-event-details > div { grid-template-columns: 75px minmax(0, 1fr); }
-    .community-page #community-registration,
-    .community-page #digital-confidence { scroll-margin-top: 155px; }
-}
+ 
