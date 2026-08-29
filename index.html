@@ -254,7 +254,14 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link active">Home</a></li>
                         <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="courses-dropdown">
+                            <a href="courses.html" class="nav-link">Courses</a>
+                            <button class="courses-dropdown-toggle" type="button" aria-label="Show course options" aria-expanded="false" aria-controls="courses-submenu" title="Show course options"><span aria-hidden="true">&#8964;</span></button>
+                            <ul class="courses-submenu" id="courses-submenu">
+                                <li><a href="courses.html">Academic Tuition</a></li>
+                                <li><a href="community-support.html">Community Support</a></li>
+                            </ul>
+                        </li>
                         <li><a href="index.html#contact" class="nav-link btn-contact">Contact</a></li>
                     </ul>
                 </nav>
