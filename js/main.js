@@ -97,3 +97,123 @@
   });
 
 })();
+
+// Courses disclosure and community registration are separate from academic enquiries.
+(function () {
+  'use strict';
+
+  document.querySelectorAll('.courses-dropdown').forEach(dropdown => {
+    const toggle = dropdown.querySelector('.courses-dropdown-toggle');
+    const submenu = dropdown.querySelector('.courses-submenu');
+    const hoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)');
+    if (!toggle || !submenu) return;
+
+    function setOpen(open) {
+      submenu.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Hide course options' : 'Show course options');
+      toggle.title = open ? 'Hide course options' : 'Show course options';
+    }
+
+    setOpen(false);
+    dropdown.classList.add('dropdown-ready');
+    toggle.addEventListener('click', () => setOpen(submenu.hidden));
+    dropdown.querySelector('.nav-link').addEventListener('pointerenter', () => {
+      if (hoverDevice.matches) setOpen(true);
+    });
+    dropdown.addEventListener('pointerleave', () => {
+      if (!dropdown.contains(document.activeElement)) setOpen(false);
+    });
+    dropdown.addEventListener('focusout', event => {
+      if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+    });
+    dropdown.addEventListener('keydown', event => {
+      if (event.target === toggle && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault();
+        setOpen(submenu.hidden);
+      } else if (event.key === 'Escape' && !submenu.hidden) {
+        event.preventDefault();
+        setOpen(false);
+        toggle.focus();
+      } else if (event.key === 'ArrowDown' && !submenu.contains(event.target)) {
+        event.preventDefault();
+        setOpen(true);
+        submenu.querySelector('a').focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!dropdown.contains(event.target)) setOpen(false);
+    });
+    submenu.addEventListener('click', event => {
+      if (event.target.closest('a')) setOpen(false);
+    });
+  });
+
+  const form = document.getElementById('communityRegistrationForm');
+  if (!form) return;
+  const status = document.getElementById('communityFormStatus');
+  const button = form.querySelector('button[type="submit"]');
+  const requiredFields = Array.from(form.querySelectorAll('[required]'));
+  let submitting = false;
+
+  function validateField(field) {
+    field.setCustomValidity('');
+    if (!field.value.trim()) {
+      field.setCustomValidity('Please complete this field.');
+    } else if (field.type === 'tel' && !/^[+()\d\s.\-]{7,30}$/.test(field.value.trim())) {
+      field.setCustomValidity('Please enter a valid phone number.');
+    } else if (field.type === 'tel' && field.value.replace(/\D/g, '').length < 7) {
+      field.setCustomValidity('Please enter a valid phone number.');
+    }
+    field.setAttribute('aria-invalid', String(!field.validity.valid));
+  }
+
+  function showStatus(message, state) {
+    status.textContent = message;
+    status.dataset.state = state;
+    status.hidden = false;
+  }
+
+  requiredFields.forEach(field => {
+    field.addEventListener('input', () => validateField(field));
+    field.addEventListener('invalid', () => field.setAttribute('aria-invalid', 'true'));
+  });
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (submitting) return;
+    requiredFields.forEach(validateField);
+    if (!form.reportValidity()) return;
+
+    submitting = true;
+    button.disabled = true;
+    button.textContent = 'Sending...';
+    form.setAttribute('aria-busy', 'true');
+    showStatus('Sending your registration...', 'pending');
+
+    try {
+      const data = new FormData(form);
+      requiredFields.forEach(field => data.set(field.name, field.value.trim()));
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error('Registration was not accepted.');
+      form.reset();
+      requiredFields.forEach(field => {
+        field.setCustomValidity('');
+        field.removeAttribute('aria-invalid');
+      });
+      showStatus('Thank you. Your registration has been received. We will contact you by phone or email to confirm your place. Your place is not confirmed yet.', 'success');
+    } catch (error) {
+      showStatus('We could not confirm that your registration was received. Your details are still here. Please try again, or contact admissions@edifyacademy.co.uk or 07776 926664.', 'error');
+    } finally {
+      submitting = false;
+      button.disabled = false;
+      button.textContent = 'Register Interest';
+      form.removeAttribute('aria-busy');
+      status.focus();
+    }
+  });
+})();
