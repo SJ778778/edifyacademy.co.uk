@@ -119,7 +119,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: var(--spacing-sm) 0;
+    padding: 8px 0;
 }
 
 .header-content {
@@ -128,12 +128,22 @@ img {
     align-items: center;
 }
 
+.logo {
+    position: relative;
+    display: block;
+    flex: 0 0 75px;
+    width: 75px;
+    height: 112px;
+    overflow: hidden;
+}
+
 .logo img {
-    height: 175px;
+    position: absolute;
+    top: -44.3px;
+    left: -32.5px;
+    height: 210px;
     width: auto;
-    max-width: 100%;
-    transform: scale(1.2);
-    transform-origin: left center;
+    max-width: none;
 }
 
 .main-nav {
@@ -1238,8 +1248,16 @@ main {
         grid-template-columns: 1fr;
     }
     
+    .logo {
+        flex-basis: 56px;
+        width: 56px;
+        height: 82px;
+    }
+
     .logo img {
-        height: 125px;
+        top: -30.5px;
+        left: -22px;
+        height: 150px;
     }
 }
 
@@ -1256,8 +1274,16 @@ main {
         width: 100%;
     }
     
+    .logo {
+        flex-basis: 46px;
+        width: 46px;
+        height: 67px;
+    }
+
     .logo img {
-        height: 100px;
+        top: -23.6px;
+        left: -16.9px;
+        height: 120px;
     }
 }
 
@@ -1403,4 +1429,7 @@ main {
 
 @media (max-width: 480px) {
     .community-page .contact-form { padding: var(--spacing-md); }
- 
+    .community-page .community-event-details > div { grid-template-columns: 75px minmax(0, 1fr); }
+    .community-page #community-registration,
+    .community-page #digital-confidence { scroll-margin-top: 155px; }
+}
