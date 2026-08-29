@@ -1433,3 +1433,29 @@ main {
     .community-page #community-registration,
     .community-page #digital-confidence { scroll-margin-top: 155px; }
 }
+
+/* Event layout preview 2: information first, documentary photograph below. */
+.community-event-layout {
+    display: block;
+}
+
+.community-event-layout > div {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.community-event-photo {
+    width: 100%;
+    max-width: 760px;
+    margin: var(--spacing-md) 0 var(--spacing-xl);
+}
+
+.community-event-photo img {
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+@media (max-width: 968px) {
+    .community-event-photo { max-width: 100%; }
+}
