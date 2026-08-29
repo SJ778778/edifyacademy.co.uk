@@ -1258,3 +1258,235 @@ main {
         height: 100px;
     }
 }
+
+/* Courses dropdown: the Courses link still opens academic tuition. */
+.courses-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.courses-dropdown > .nav-link {
+    padding-right: var(--spacing-xs);
+}
+
+.courses-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--primary-color);
+    font: 1.5rem var(--font-primary);
+    cursor: pointer;
+}
+
+.courses-dropdown-toggle:hover {
+    background: var(--bg-light);
+}
+
+.courses-dropdown-toggle[aria-expanded="true"] span {
+    transform: rotate(180deg);
+}
+
+.courses-dropdown a:focus-visible,
+.courses-dropdown-toggle:focus-visible,
+.community-page a:focus-visible,
+.community-page button:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+}
+
+.courses-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 235px;
+    padding: var(--spacing-xs);
+    list-style: none;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1001;
+}
+
+.courses-dropdown:not(.dropdown-ready):hover .courses-submenu,
+.courses-dropdown:not(.dropdown-ready):focus-within .courses-submenu,
+.courses-dropdown.dropdown-ready .courses-submenu:not([hidden]) {
+    display: block;
+}
+
+.courses-submenu a {
+    display: block;
+    padding: 12px var(--spacing-sm);
+    border-radius: 4px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.courses-submenu a:hover,
+.courses-submenu a[aria-current="page"] {
+    color: var(--primary-color);
+    background: var(--bg-light);
+}
+
+/* Community Support only: reuse the site's typography, spacing and form styles. */
+.community-page h1 { font-size: 3rem; }
+.community-page h2 { font-size: 2.25rem; }
+.community-page h3 { font-size: 1.5rem; }
+
+.community-page .community-story {
+    max-width: 850px;
+}
+
+.community-page .community-story p:last-child {
+    margin-bottom: 0;
+}
+
+.community-event {
+    background: var(--bg-light);
+}
+
+.community-event-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+    gap: var(--spacing-xl);
+}
+
+.community-event-badge {
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+    padding: 4px 12px;
+    border-left: 3px solid var(--secondary-color);
+    background: var(--bg-white);
+    color: var(--primary-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.community-event-details {
+    margin: var(--spacing-md) 0;
+}
+
+.community-event-details > div {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: var(--spacing-sm);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.community-event-details dt {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.community-event-details dd {
+    color: var(--text-dark);
+}
+
+.community-event-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.community-event-photo figcaption {
+    margin-top: var(--spacing-xs);
+    color: var(--text-light);
+    font-size: 0.8125rem;
+}
+
+.community-event-photo a,
+.community-page .community-form-note a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.community-page .community-note {
+    font-size: 1rem;
+}
+
+.community-page .community-registration {
+    background: var(--bg-white);
+}
+
+.community-page .community-registration .contact-content {
+    margin-top: 0;
+}
+
+.community-page .contact-info,
+.community-page .contact-form {
+    min-width: 0;
+}
+
+.community-page .contact-item a,
+.community-page .community-form-status {
+    overflow-wrap: anywhere;
+}
+
+.community-page #community-registration,
+.community-page #digital-confidence {
+    scroll-margin-top: 230px;
+}
+
+.community-page .community-form-note {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+}
+
+.community-page .community-form-status {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 6px;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.community-page .community-form-status[hidden] { display: none; }
+.community-page .community-form-status[data-state="error"] { border-left-color: #dc2626; }
+.community-page .contact-form button:disabled { opacity: 0.65; cursor: wait; transform: none; }
+.community-page .contact-form input[aria-invalid="true"] { border-color: #dc2626; }
+
+@media (max-width: 968px) {
+    .courses-dropdown { flex-wrap: wrap; }
+    .courses-dropdown > .nav-link { flex: 1; width: auto; }
+    .courses-submenu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
+
+    /* Keep the expanded menu below the existing logo at every breakpoint. */
+    .header:has(.courses-dropdown) .nav-list {
+        position: absolute;
+        top: 100%;
+        max-height: calc(100dvh - 207px);
+        overflow-y: auto;
+    }
+
+    .community-event-layout { grid-template-columns: 1fr; }
+    .community-event-photo { max-width: 650px; }
+}
+
+@media (max-width: 768px) {
+    .community-page h1 { font-size: 2.25rem; }
+    .community-page h2 { font-size: 1.75rem; }
+    .header:has(.courses-dropdown) .nav-list { max-height: calc(100dvh - 157px); }
+    .community-page #community-registration,
+    .community-page #digital-confidence { scroll-margin-top: 180px; }
+}
+
+@media (max-width: 480px) {
+    .header:has(.courses-dropdown) .nav-list { max-height: calc(100dvh - 132px); }
+    .community-page .contact-form { padding: var(--spacing-md); }
+    .community-page .community-event-details > div { grid-template-columns: 75px minmax(0, 1fr); }
+    .community-page #community-registration,
+    .community-page #digital-confidence { scroll-margin-top: 155px; }
+}
