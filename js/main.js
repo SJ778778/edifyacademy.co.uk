@@ -86,7 +86,7 @@
 
   // Observe elements that should animate
   const animateElements = document.querySelectorAll(
-    '.feature-card, .testimonial-card, .course-card, .instructor-card, .timeline-item, .gallery-item'
+    '.feature-card, .testimonial-card, .instructor-card, .gallery-item'
   );
 
   animateElements.forEach(el => {
