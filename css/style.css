@@ -1459,3 +1459,137 @@ main {
 @media (max-width: 968px) {
     .community-event-photo { max-width: 100%; }
 }
+
+/* Cleanup preview: focused course presentation and consolidated imagery. */
+.course-status {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-bottom: var(--spacing-sm);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.course-status-open {
+    color: #1e40af;
+    background: rgba(30, 64, 175, 0.1);
+}
+
+.course-status-interest {
+    color: #4b5563;
+    background: rgba(75, 85, 99, 0.1);
+}
+
+.course-image {
+    min-height: 560px;
+}
+
+.course-card-combined .course-image {
+    min-height: 680px;
+}
+
+.combined-course-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-sm) 0 var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.combined-course-sections section + section {
+    padding-left: var(--spacing-lg);
+    border-left: 1px solid var(--border-color);
+}
+
+.combined-course-sections h3 {
+    font-size: 1.35rem;
+}
+
+.combined-course-sections p,
+.combined-course-sections .course-features li {
+    font-size: 0.95rem;
+}
+
+.journey-preview {
+    position: relative;
+    min-height: 1180px;
+    margin: var(--spacing-2xl) 0;
+    background-image:
+        linear-gradient(rgba(248, 250, 252, 0.8), rgba(248, 250, 252, 0.86)),
+        url('../assets/academic/our-journey-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.journey-preview .container {
+    position: relative;
+    z-index: 1;
+}
+
+.journey-preview .timeline-item {
+    min-height: 270px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.journey-preview .timeline-content {
+    max-width: 680px;
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(229, 231, 235, 0.85);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(2px);
+}
+
+.teaching-card {
+    min-height: 245px;
+    padding-top: var(--spacing-lg);
+}
+
+.teaching-card .teaching-title {
+    padding-right: 5.25rem;
+}
+
+@media (max-width: 968px) {
+    .course-image,
+    .course-card-combined .course-image {
+        min-height: 340px;
+        max-height: 440px;
+    }
+
+    .combined-course-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .combined-course-sections section + section {
+        padding-top: var(--spacing-md);
+        padding-left: 0;
+        border-top: 1px solid var(--border-color);
+        border-left: 0;
+    }
+
+    .journey-preview {
+        min-height: 1080px;
+        background-position: 62% center;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-image,
+    .course-card-combined .course-image {
+        min-height: 280px;
+        max-height: 320px;
+    }
+
+    .journey-preview {
+        min-height: 1160px;
+    }
+
+    .journey-preview .timeline-content {
+        padding: var(--spacing-md);
+    }
