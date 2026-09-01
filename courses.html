@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
@@ -32,7 +33,7 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                        <li><a href="courses.html" class="nav-link active" aria-current="page">Courses</a></li>
                         <li><a href="community-support.html" class="nav-link">Community</a></li>
                         <li><a href="index.html#contact" class="nav-link btn-contact">Contact</a></li>
                     </ul>
@@ -53,9 +54,9 @@
         <div class="page-hero">
             <div class="container">
                 <h1 class="page-title">Our Courses</h1>
-                <p class="page-description">Comprehensive tutoring programs designed to help students excel in their studies and achieve their academic goals. Start with a free trial - an initial taster session to see how we can help.</p>
+                <p class="page-description">Explore current GCSE Maths tuition and register your interest in future A-Level, Key Stage 2 and 11+ support.</p>
                 <p class="page-description" style="margin-top: 10px; font-weight: 600; color: var(--primary-color);">
-                    <strong>Currently Enrolling:</strong> GCSE and Primary School Tuition only. Other subjects available for interest registration.
+                    <strong>Now enrolling:</strong> GCSE Maths. All other courses shown below are open for interest registration.
                 </p>
             </div>
         </div>
@@ -64,116 +65,76 @@
         <section class="courses-section">
             <div class="container">
                 <div class="courses-grid">
-                    <div class="course-card">
+                    <article class="course-card">
                         <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=70" alt="GCSE Tutoring" width="400" height="250">
+                            <img src="assets/academic/gcse-maths-student.jpg" alt="A GCSE student completing Maths work independently" width="400" height="600">
                         </div>
                         <div class="course-content">
-                            <h2 class="course-title">GCSE (Currently Enrolling)</h2>
-                            <p class="course-description">Comprehensive support for GCSE students. We are currently enrolling for GCSE (Foundation & Higher tiers). Our expert tutors help students prepare for exams with targeted revision strategies and practice papers. We cover all major exam boards including Edexcel, AQA, and OCR.</p>
+                            <span class="course-status course-status-open">Now enrolling</span>
+                            <h2 class="course-title">GCSE Maths</h2>
+                            <p class="course-description">Foundation and Higher GCSE Maths tuition for Years 10–11. Every student completes a free diagnostic before placement so we can identify gaps and recommend the most suitable group.</p>
                             <ul class="course-features">
-                                <li>Mathematics (Foundation & Higher)</li>
-                                <li>English Language & Literature</li>
-                                <li>Sciences (Biology, Chemistry, Physics)</li>
-                                <li>Exam technique and revision strategies</li>
-                                <li>Mock exam practice with detailed feedback</li>
-                                <li>Progress tracking and regular assessments</li>
+                                <li>Foundation and Higher content</li>
+                                <li>Diagnostic assessment before placement</li>
+                                <li>Targeted topic revision</li>
+                                <li>Exam technique and problem solving</li>
+                                <li>Practice questions with detailed feedback</li>
+                                <li>Regular progress review</li>
                             </ul>
-                            <div class="course-image-inline">
-                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=70" alt="GCSE students" width="500" height="300">
-                            </div>
-                            <a href="index.html#contact" class="btn btn-primary">Enquire Now</a>
+                            <a href="index.html#contact" class="btn btn-primary">Book Diagnostic</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="course-card">
+                    <article class="course-card">
                         <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=70" alt="A-Level Tutoring" width="400" height="250">
+                            <img src="assets/academic/homepage-hero.jpg" alt="A tutor working with secondary students around a classroom table" width="400" height="600">
                         </div>
                         <div class="course-content">
-                            <h2 class="course-title">A-Level Support (Not Currently Enrolling)</h2>
-                            <p class="course-description">Advanced tutoring for A-Level students preparing for university. We provide in-depth subject knowledge and exam preparation to help students achieve their target grades. Our tutors are experts in their fields with years of A-Level teaching experience. <strong>We are not currently enrolling for A-Level courses, but you can register your interest.</strong></p>
+                            <span class="course-status course-status-interest">Register interest</span>
+                            <h2 class="course-title">A-Level Tuition</h2>
+                            <p class="course-description">Selected A-Level support may open depending on demand and tutor availability. Register your interest and tell us which subject you need.</p>
                             <ul class="course-features">
-                                <li>Mathematics & Further Mathematics</li>
+                                <li>Mathematics and Further Mathematics</li>
+                                <li>Biology, Chemistry and Physics</li>
                                 <li>English Literature</li>
-                                <li>All Sciences (Biology, Chemistry, Physics)</li>
                                 <li>Economics</li>
-                                <li>University preparation and UCAS support</li>
-                                <li>Extended project qualification (EPQ) support</li>
+                                <li>Exam preparation and subject support</li>
                             </ul>
-                            <div class="course-image-inline">
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=70" alt="A-Level students" width="500" height="300">
-                            </div>
-                            <a href="index.html#contact" class="btn btn-primary">Enquire Now</a>
+                            <a href="index.html#contact" class="btn btn-secondary">Register Interest</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="course-card">
+                    <article class="course-card course-card-combined">
                         <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=70" alt="11+ Preparation" width="400" height="250">
+                            <img src="assets/academic/ks2-11plus-classroom.jpg" alt="A tutor supporting two younger students in a classroom" width="400" height="700">
                         </div>
                         <div class="course-content">
-                            <h2 class="course-title">11+ Preparation (Not Currently Enrolling)</h2>
-                            <p class="course-description">Specialised preparation for 11+ entrance exams. Our program covers all aspects of the 11+ including verbal reasoning, non-verbal reasoning, Mathematics, and English. We help students build confidence and develop the skills needed to succeed in competitive entrance exams. <strong>We are not currently enrolling for 11+ preparation, but you can register your interest.</strong></p>
-                            <ul class="course-features">
-                                <li>Verbal Reasoning</li>
-                                <li>Non-Verbal Reasoning</li>
-                                <li>Mathematics</li>
-                                <li>English Comprehension</li>
-                                <li>Exam technique and time management</li>
-                                <li>Mock tests and practice papers</li>
-                            </ul>
-                            <div class="course-image-inline">
-                                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=70" alt="11+ preparation" width="500" height="300">
+                            <span class="course-status course-status-interest">Register interest</span>
+                            <h2 class="course-title">Key Stage 2 &amp; 11+ Support</h2>
+                            <p class="course-description">Two distinct programmes for younger learners, presented together so families can quickly find the right level.</p>
+                            <div class="combined-course-sections">
+                                <section aria-labelledby="ks2-title">
+                                    <h3 id="ks2-title">Key Stage 2</h3>
+                                    <p>Support with the core knowledge and confidence pupils need during Years 3–6.</p>
+                                    <ul class="course-features">
+                                        <li>Mathematics</li>
+                                        <li>English reading and writing</li>
+                                        <li>SATs preparation</li>
+                                    </ul>
+                                </section>
+                                <section aria-labelledby="eleven-plus-title">
+                                    <h3 id="eleven-plus-title">11+ Preparation</h3>
+                                    <p>Structured preparation for selective entrance assessments.</p>
+                                    <ul class="course-features">
+                                        <li>Verbal and non-verbal reasoning</li>
+                                        <li>Mathematics and English comprehension</li>
+                                        <li>Practice papers and time management</li>
+                                    </ul>
+                                </section>
                             </div>
-                            <a href="index.html#contact" class="btn btn-primary">Enquire Now</a>
+                            <a href="index.html#contact" class="btn btn-secondary">Register Interest</a>
                         </div>
-                    </div>
-
-                    <div class="course-card">
-                        <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=70" alt="Primary School Support" width="400" height="250">
-                        </div>
-                        <div class="course-content">
-                            <h2 class="course-title">Primary School Support (Currently Enrolling)</h2>
-                            <p class="course-description">Building strong foundations for younger students. We are currently enrolling for Primary School tuition. We help primary school students develop confidence and essential skills across core subjects. Our approach makes learning fun and engaging while ensuring students master fundamental concepts.</p>
-                            <ul class="course-features">
-                                <li>Key Stage 1 & 2</li>
-                                <li>Mathematics</li>
-                                <li>English (Reading & Writing)</li>
-                                <li>SATs preparation</li>
-                                <li>Phonics and literacy support</li>
-                                <li>Confidence building activities</li>
-                            </ul>
-                            <div class="course-image-inline">
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=70" alt="Primary students" width="500" height="300">
-                            </div>
-                            <a href="index.html#contact" class="btn btn-primary">Enquire Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Info Section -->
-        <section class="info-section">
-            <div class="container">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=70" alt="Flexible learning" width="400" height="250">
-                        <h3>Flexible Learning Options</h3>
-                        <p>Choose between online and in-person sessions to fit your schedule. Our online platform offers the same quality instruction as in-person sessions.</p>
-                    </div>
-                    <div class="info-card">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=70" alt="Expert tutors" width="400" height="250">
-                        <h3>Expert Tutors</h3>
-                        <p>All our tutors are qualified teachers with extensive experience in their subject areas. They understand exam requirements and know how to help students succeed.</p>
-                    </div>
-                    <div class="info-card">
-                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=70" alt="Proven results" width="400" height="250">
-                        <h3>Proven Results</h3>
-                        <p>Our students consistently achieve their target grades and beyond. We track progress regularly and adjust teaching methods to ensure success.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -190,7 +151,7 @@
                         <p><a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a></p>
                         <p>
                             <a href="tel:+447776926664">
-                                +44 7776926664
+                                07776 926664
                             </a>
                         </p>
                     </div>
@@ -205,25 +166,14 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Student Safety</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html#safeguarding">Safeguarding Policy</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="about.html#safeguarding">Safeguarding information</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
-                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
-                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
-                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Edify Academy. All rights reserved.</p>
+                <p>&copy; 2026 Edify Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
