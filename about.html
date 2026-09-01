@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
@@ -31,7 +32,7 @@
                 <nav class="main-nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
                         <li><a href="courses.html" class="nav-link">Courses</a></li>
                         <li><a href="community-support.html" class="nav-link">Community</a></li>
                         <li><a href="index.html#contact" class="nav-link btn-contact">Contact</a></li>
@@ -63,9 +64,8 @@
                 <div class="content-row">
                     <div class="content-text">
                         <h2 class="content-title">Our Story</h2>
-                        <p>Edify Academy began in 2024 with a mission to help schools find quality supply teachers. We quickly recognised the need for comprehensive educational support and evolved our services to meet the changing needs of students and schools.</p>
-                        <p>In 2025, we expanded to supplying tutors directly to students, helping them access online tuition and personalised learning support. Today, we're proud to offer both online and in-person tutoring services, helping students across the UK achieve their academic goals.</p>
-                        <p>Our new in-person tutoring centre opening in 2026 represents the next chapter in our journey, providing students with a dedicated space for focused learning and academic growth.</p>
+                        <p>Edify Academy was created to make focused, supportive education easier to access. Our experience working with schools helped us understand how much difference clear explanations, careful assessment and consistent guidance can make.</p>
+                        <p>We now bring that approach directly to students through online and in-person tuition, with learning shaped around each student's current level, confidence and goals.</p>
                     </div>
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=70" alt="Edify Academy story" width="600" height="400">
@@ -75,7 +75,7 @@
         </div>
 
         <!-- Timeline -->
-        <div class="timeline-section">
+        <div class="timeline-section journey-preview" id="our-journey">
             <div class="container">
                 <h2 class="section-title">Our Journey</h2>
                 <div class="timeline">
@@ -84,7 +84,6 @@
                         <div class="timeline-content">
                             <h3 class="timeline-title">The Beginning</h3>
                             <p>We started as a company helping schools find supply teachers, connecting educational institutions with qualified professionals. Our focus was on ensuring continuity in education when regular teachers were unavailable.</p>
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=70" alt="2024 Beginning" width="500" height="300" style="margin-top: 20px; border-radius: 12px;">
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -92,15 +91,13 @@
                         <div class="timeline-content">
                             <h3 class="timeline-title">Expanding Services</h3>
                             <p>We expanded to supplying tutors directly to students, helping them access online tuition and personalised learning support. This shift allowed us to reach more students and provide tailored educational assistance.</p>
-                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=70" alt="2025 Expansion" width="500" height="300" style="margin-top: 20px; border-radius: 12px;">
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2026</div>
                         <div class="timeline-content">
                             <h3 class="timeline-title">New Chapter</h3>
-                            <p>We're opening our first in-person tutoring centre, providing students with a dedicated space for focused learning and academic growth. This physical space represents our commitment to accessible, quality education.</p>
-                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=70" alt="2026 New Centre" width="500" height="300" style="margin-top: 20px; border-radius: 12px;">
+                            <p>Our in-person tuition at The Westgate School gives students a dedicated setting for focused learning and academic growth, while online support continues to provide flexibility.</p>
                         </div>
                     </div>
                 </div>
@@ -114,33 +111,21 @@
                 <p class="section-description">Our teaching methodology is designed to ensure every student receives the support they need to succeed.</p>
                 <div class="teaching-grid">
                     <div class="teaching-card">
-                        <div class="teaching-image">
-                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=70" alt="Assessment" width="300" height="200">
-                        </div>
                         <div class="teaching-number">01</div>
                         <h3 class="teaching-title">Assessment</h3>
                         <p class="teaching-text">We begin by assessing each student's current level, identifying strengths and areas for improvement to create a personalised learning plan that targets their specific needs.</p>
                     </div>
                     <div class="teaching-card">
-                        <div class="teaching-image">
-                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=70" alt="Personalisation" width="300" height="200">
-                        </div>
                         <div class="teaching-number">02</div>
                         <h3 class="teaching-title">Personalisation</h3>
                         <p class="teaching-text">Every student receives a tailored learning experience that matches their learning style, pace, and academic goals, ensuring maximum effectiveness.</p>
                     </div>
                     <div class="teaching-card">
-                        <div class="teaching-image">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=70" alt="Engagement" width="300" height="200">
-                        </div>
                         <div class="teaching-number">03</div>
                         <h3 class="teaching-title">Engagement</h3>
                         <p class="teaching-text">Our tutors use interactive methods and real-world examples to keep students engaged and motivated throughout their learning journey.</p>
                     </div>
                     <div class="teaching-card">
-                        <div class="teaching-image">
-                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=400&q=70" alt="Progress Tracking" width="300" height="200">
-                        </div>
                         <div class="teaching-number">04</div>
                         <h3 class="teaching-title">Progress Tracking</h3>
                         <p class="teaching-text">Regular assessments and progress reports ensure students stay on track and parents are kept informed of their child's development.</p>
@@ -229,9 +214,6 @@
                 <h2 class="section-title">Safeguarding</h2>
                 <div class="safeguarding-content">
                     <p>At Edify Academy, the safety and wellbeing of our students is our top priority. We are committed to providing a safe, secure, and supportive learning environment for all students.</p>
-                    <div class="safeguarding-image">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=70" alt="Safe learning environment" width="700" height="400">
-                    </div>
                     <div class="safeguarding-points">
                         <div class="safeguarding-point">
                             <h3>DBS Checks</h3>
@@ -251,7 +233,7 @@
                         </div>
                     </div>
                     <div class="safeguarding-download">
-                        <a href="documents/Edify-Academy-Safeguarding-Policy.pdf" class="btn btn-primary" download>Download Safeguarding Policy</a>
+                        <a href="assets/Edify-Academy-Safeguarding-Policy.pdf" class="btn btn-primary" download>Download Safeguarding Policy</a>
                     </div>
                 </div>
             </div>
@@ -268,7 +250,7 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>We offer tutoring in a wide range of subjects including Mathematics, English, Sciences (Biology, Chemistry, Physics), and more. However, we are currently only enrolling for <strong>GCSE Maths</strong> and <strong>Primary School tuition</strong>. Other subjects can be registered for interest, but we are not currently enrolling for them.</p>
+                            <p>We are currently enrolling for <strong>GCSE Maths</strong> Foundation and Higher tuition. A-Level, Key Stage 2 and 11+ courses are available for interest registration.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -277,7 +259,7 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>We offer both online and in-person tutoring options. Our new in-person tutoring centre is opening in 2026, providing students with a dedicated learning space. Online sessions are available immediately and offer flexibility for busy schedules.</p>
+                            <p>We offer both online and in-person tutoring options. In-person tuition takes place at The Westgate School, while online sessions provide additional flexibility.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -332,7 +314,7 @@
                         <p><a href="mailto:admissions@edifyacademy.co.uk">admissions@edifyacademy.co.uk</a></p>
                         <p>
                             <a href="tel:+447776926664">
-                                +44 7776926664
+                                07776 926664
                             </a>
                         </p>
                     </div>
@@ -347,25 +329,14 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Student Safety</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html#safeguarding">Safeguarding Policy</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#safeguarding">Safeguarding information</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
-                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
-                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
-                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Edify Academy. All rights reserved.</p>
+                <p>&copy; 2026 Edify Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
